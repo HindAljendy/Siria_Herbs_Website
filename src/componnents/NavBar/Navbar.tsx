@@ -1,8 +1,8 @@
 import React from 'react'
-import './NavBar/Navbar.css'
-import arrowIcon from '../assets/icons/arrow.svg'
-import searchIcon from '../assets/icons/serach Icon.svg'
-import logo from '../assets/images/home/nav_logo.webp'
+import './Navbar.css'
+import arrowIcon from '../../assets/icons/arrow.svg'
+import searchIcon from '../../assets/icons/serach Icon.svg'
+import logo from '../../assets/images/home/nav_logo.webp'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
