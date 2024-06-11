@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.ra_nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var( --white-color);
+    font-family: var( --almarai-family);
+    padding-top: 16.22px;
+    padding-bottom: 16.22px;
+   
+}
+
+
+
+.ra_nav .nav_logo {
+ 
+   padding-top: 16.22px;
+    padding-right: 100px;
+    padding-bottom: 16.22px;
+    padding-left:453px;
+}
+
+.ra_nav .nav_logo img {
+    width:166px;
+    height: 47.70px;
+    
+}
+
+.ra_nav .nav_items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:96.8px;
+    
+}
+
+
+.ra_nav .nav_links{
+    display: flex;
+    align-items: center;
+    gap:40px;
+    font-size: 20px;
+   
+   
+
+}
+
+.ra_nav .nav_items .nav_links li{
+    color: var( --dark-black );
+}
+
+
+.ra_nav .nav_items .nav_links .dropdown{
+    display: flex;
+    align-items: center;
+}
+
+.ra_nav .nav_items .nav_links .dropdown li{
+    padding: 5px;
+}
+
+.ra_nav .nav_items .nav_links .nav_search{
+    padding-left: 103.19px;
+}
+
+nav a{
+    list-style:none;
+    text-decoration: none;
+}
