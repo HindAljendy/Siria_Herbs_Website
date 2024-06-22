@@ -1,0 +1,131 @@
+.na-footer {
+    height: 489px;
+    width: 1366px;
+    background-color: #283760;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    flex-direction: column;
+
+    
+}
+.na-footer .na-container {
+    height:231px;
+    width: 1166px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+
+}
+.na-container .na-sec1 {
+    height: 201.41px;
+    width: 479px;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.na-sec1 img{
+    height: 71.41px;
+    width: 251px;
+    margin-bottom: 40px;
+}
+
+.na-sec1 p{
+    height: 90px;
+    width:419px;
+    font-family: --almarai-family;
+    margin: 0; 
+    font-size: 20px;
+    color: white;
+}
+
+.na-container .na-sec2{
+    height: 231px;
+    width: 78px;
+    flex-direction: column;
+    color: white;
+}
+.na-container .na-sec2 h4{
+    font-size: 24px;
+
+}
+.na-container .na-sec2 p{
+    font-size: 20px;
+}
+
+
+.na-container .na-sec3{
+    height: 231px;
+    width: 160px;
+    flex-direction: column;
+    color: white;
+}
+.na-container .na-sec3 h4{
+    font-size: 24px;
+}
+.na-container .na-sec3 p{
+    font-size: 20px;
+}
+
+
+
+.na-container .na-sec4{
+    height: 231px;
+    width: 239px;
+    flex-direction: column;
+    color: white;
+}
+.na-container .na-sec4 h4{
+    font-size: 24px;
+}
+
+
+.na-container .na-sec4 .na-contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+.na-contact-item .na-icon-container {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+
+}
+
+.na-contact-item .na-icon-container img {
+    height: 20px; 
+    width: 20px;
+}
+
+.na-sec4 .na-contact-item p {
+    margin: 0;
+    font-family: --almarai-family;
+    font-size: 20px;
+}
+.na-footer .na-line {
+    width: 1166px;
+    height: 1px;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.na-footer .na-footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+
