@@ -1,59 +1,59 @@
 .IB_FormContainer {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    flex-direction: row-reverse;
-  }
-  
-  .IB_TextContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: 20px;
-  }
-  
-  .IB_TextContainer p {
-    display: flex;
-    align-items: center;
-    margin-top: -10px;
-    font-family: var(--almarai-family);
-  }
-  
-  .IB_Image {
-    margin-right: 5px; 
-    margin-left: 5px;
-  }
-  
-  .IB_InputContainer {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-left: 20px;
-  }
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  flex-direction: row-reverse;
+}
 
-  .IB_Input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .IB_Button {
-    position: absolute;
-    height: 100%;
-    background-color:var(--bb-green-color);
-    color: white;
-    border: none;
-    padding: 0 20px;
-    border-radius: 5px 0 0 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .IB_Button:hover {
-    background-color: var(--green-a-vie2);
-  }
+.IB_TextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.IB_TextContainer p {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  font-size: 15px;
+  font-family: var(--almarai-family);
+}
+
+.IB_Image {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.IB_InputContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 20px;
+}
+
+.IB_Input {
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: right;
+}
+
+.IB_Button {
+  position: absolute;
+  height: 100%;
+  background-color: var(--green-color);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

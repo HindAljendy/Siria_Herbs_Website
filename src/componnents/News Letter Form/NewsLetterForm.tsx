@@ -9,7 +9,7 @@ const NewsLetterForm: React.FC = () => {
           <h2>الطبيعة السورية هي قلب الطبيعة</h2>
           <p>
             اشترك معنا وتلقى أحدث أخبارنا ومنتجاتنا
-            <img src="/src/assets/icons/footer/_x39__18_.svg" alt="صورة الاشتراك" className="IB_Image" />
+            <img src="/src/assets/icons/footer/_x39__18_.svg" alt="" className="IB_Image" />
           </p>
         </div>
         <div className="IB_InputContainer">
