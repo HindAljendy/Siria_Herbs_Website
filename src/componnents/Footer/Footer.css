@@ -1,0 +1,224 @@
+.na-footer {
+    height: 489px;
+    width: 100%;
+    background-color: #283760;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    flex-direction: column;
+}
+
+.na-footer .na-container {
+    height: 231px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-right: 20px;
+}
+
+.na-container .na-sec1 {
+    height: 201.41px;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+}
+
+.na-sec1 img {
+    height: 71.41px;
+    width: 251px;
+    margin-bottom: 40px;
+}
+
+.na-sec1 p {
+    height: 90px;
+    width: 400px;
+    font-family: --almarai-family;
+    margin: 0;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.na-container .na-sec2,
+.na-container .na-sec3,
+.na-container .na-sec4 {
+    height: 231px;
+    flex-direction: column;
+    color: white;
+}
+
+.na-container .na-sec2 h4,
+.na-container .na-sec3 h4,
+.na-container .na-sec4 h4 {
+    font-size: 24px;
+}
+
+.na-container .na-sec2 p,
+.na-container .na-sec3 p,
+.na-sec4 .na-contact-item p {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+
+}
+
+.na-container .na-sec4 .na-contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.na-contact-item .na-icon-container {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.na-contact-item .na-icon-container img {
+    height: 20px;
+    width: 20px;
+}
+
+.na-footer .na-line {
+    width: 1166px;
+    height: 1px;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.na-footer .na-footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    margin-top: 60px;
+    font-size: 16px;
+}
+@media (max-width: 1200px) {
+
+    .na-container .na-sec1,
+    .na-container .na-sec2,
+    .na-container .na-sec3,
+    .na-container .na-sec4 {
+        margin: 10px 0;
+    }
+    .na-container .na-sec1 p{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    .na-container .na-sec1 {
+        width: 100%;
+        align-items: center;
+    }
+    .na-container .na-sec1 img {
+        width: 80%;
+        margin-bottom: 15px;
+
+    }
+    .na-container .na-sec1 p {
+        width: 90%;
+        font-size: 1rem;
+    }
+    .na-container .na-sec2,
+    .na-container .na-sec3,
+    .na-container .na-sec4 {
+        width: 30%;
+    }
+    .na-container .na-sec2 h4,
+    .na-container .na-sec3 h4,
+    .na-container .na-sec4 h4 {
+        font-size: 20px;
+    }
+    .na-container .na-sec2 p,
+    .na-container .na-sec3 p{
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    .na-sec4 .na-contact-item p{
+        font-size: 0.9rem;
+        margin-left: 15px;;
+    }
+    .na-footer .na-line {
+        width: 80%;
+    }
+    .na-footer .na-footer-bottom {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 590px) {
+        .na-container .na-sec1 {
+            width: 100%;
+            align-items: cen1ter;
+        }
+        .na-container .na-sec1 img {
+            width: 80%;
+            margin-bottom: 15px;
+    
+        }
+        .na-container .na-sec1 p {
+            width: 90%;
+            font-size: 0.8rem;
+        }
+        .na-sec4 .na-contact-item p{
+            font-size: 0.8rem;
+            margin-left: 15px;;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .na-container {
+            display: block;
+        }
+        
+        .na-sec1 {
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .na-sec1 img {
+            width: 80%;
+            margin-bottom: 15px;
+        }
+        
+        .na-sec1 p {
+            font-size: 0.5rem;
+        }
+        
+        .na-sec2, .na-sec3, .na-sec4 {
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            text-align: center;
+        }
+    
+        .na-sec4 .na-contact-item p {
+            font-size: 0.2rem;
+            margin-left: 15px;
+        }
+        
+        .na-line {
+            width: 80%;
+            margin: 20px auto;
+        }
+        
+        .na-footer-bottom {
+            font-size: 0.7rem;
+        }
+    }
