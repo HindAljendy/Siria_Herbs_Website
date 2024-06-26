@@ -14,6 +14,69 @@
     position: absolute;
     z-index: 1;
   }
+  /*
+   ============================== 
+  =================================
+  */
+  /* if i have two box */
+  .ne-image-layout-2 {
+    width: 1063.5px;
+    height: 262px;
+    background-image: url(../../assets/images/home/policylayout.svg);
+    position: absolute;
+    z-index: 1;
+  }
+  /* if i have one box */
+  .ne-image-layout-1 {
+    width: 814.5px;
+    height: 262px;
+    background-image: url(../../assets/images/home/policylayout.svg);
+    position: absolute;
+    z-index: 1;
+  }
+  .ne-layout-box-1-1{
+    padding-right: 23px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .ne-policy-description-1{
+    max-width: 609.34px;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: var(--almarai-family);
+  }
+  /* ======================
+  ===================================
+  */
+  /* if i have more than three */
+  .ne-multyboxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+  }
+  .ne-multy-box{
+    padding: 10px;
+    width: 306px;
+    height: 312px;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-image: radial-gradient(circle at 29% 98%, #4EAFDA 29%, #9BC352 98%) 20 stretch;
+  }
+  .ne-policy-description-4{
+    font-family: var(--almarai-family);
+    font-size: 16px;
+    font-weight: var(--normal-weight);
+    max-width: 304px;
+    line-height: 40px;
+    color: var(--dark-black);
+  }
+  /* ======================================= */
   
   .ne-privacy-title .ne-head-title {
     text-align: center;
@@ -159,6 +222,41 @@
     .ne-layout-box-two {
       
       gap: 14rem;
+    }
+
+
+    .ne-image-layout-2 {
+      width: 375.5px;
+      height: 789.5px;
+      background-image: url(../../assets/images/home/layout1.svg);
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      padding: 19px;
+    }
+    .ne-image-layout-1 {
+      width: 375.5px;
+      height: 442.5px;
+      background-image: url(../../assets/images/home/layout1.svg);
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      padding: 19px;
+    }
+    .ne-policy-description-1{
+      max-width: 304.34px;
+      line-height: 40px;
+      font-size: 20px;
+      font-family: var(--almarai-family);
+    }
+    .ne-layout-box-1-1{
+      margin-top: 30px;
+      /* padding-right: 23px; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* gap: 2rem; */
     }
   }
   
