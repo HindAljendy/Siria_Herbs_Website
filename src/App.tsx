@@ -12,7 +12,6 @@ import React from 'react';
 import Footer from './componnents/Footer/Footer';
 import CustomNavbar from './componnents/Navbar/Navbar'
 import Navbar from './componnents/Navbar/Navbar'
-import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 
 
 function App() {
@@ -20,9 +19,8 @@ function App() {
 
   return (
     <>
-    <PrivacyPolicy/>
 
-      {/* <Contact/>
+      <Contact/>
 
       <h1>Siria Herbs Website</h1>
 
@@ -31,7 +29,7 @@ function App() {
 
     <BrowserRouter>
        <CustomNavbar/>
-    </BrowserRouter> */}
+    </BrowserRouter>
 
 
     </>
