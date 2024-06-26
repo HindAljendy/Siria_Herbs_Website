@@ -1,6 +1,6 @@
 
 import './App.css'
-import Contact from './pages/Contact/Contact';
+
 
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
   return (
     <>
      
-      <Contact/>
+
+
+      {/* <Contact/> */}
     </>
   )
 }
