@@ -22,9 +22,14 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
-  const [menuActive, setMenuActive] = useState(false);
+  const [menuActive, setMenuActive] =  useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState('');
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const handleOpenProducts = (item: React.SetStateAction<string>) => {
+    setIsOpen((prevState) => !prevState);
+    setSelectedItem(item);
+  };
   const handleItemClick = (item: React.SetStateAction<string>) => {
     setSelectedItem(item);
   };
@@ -38,71 +43,36 @@ const Navbar = () => {
     setMenuActive((prevState) => !prevState);
   };
 
-  
+
 
   return (
     <>
       <div className={`MA_head ${menuActive ? 'hide' : ''}`}>
+        <ul>
+          <li>
+            <span>info@siriaherbs.com</span>
+            <img src={mail} alt="mail" />
+          </li>
+          <li>
+            <span>+963 41 2020</span>
+            <img src={call} alt="call" />
+          </li>
+          <li>
+            <img src={insta} alt="insta" />
+          </li>
+          <li>
+            <img src={facebook} alt="facebook" />
+          </li>
+        </ul>
         <div>
           <DropdownButton id="dropdown-basic-button" title="العربية">
             <Dropdown.Item href="#/action-1">العربية</Dropdown.Item>
             <Dropdown.Item href="#/action-2">الانكليزية</Dropdown.Item>
           </DropdownButton>
         </div>
-        <ul>
-          <li>
-            <span>info@siriaherbs.com</span>
-            <img src={mail} alt="" />
-          </li>
-          <li>
-            <span>+963 41 2020</span>
-            <img src={call} alt="" />
-          </li>
-          <li>
-            <img src={insta} alt="" />
-          </li>
-          <li>
-            <img src={facebook} alt="" />
-          </li>
-        </ul>
       </div>
 
       <nav className={`MA_navbar ${menuActive ? 'hide' : ''}`}>
-        <div className="list" style={{ display: 'flex', flexDirection: 'row' }}>
-          <div className="search-logo" style={{ marginRight: '90px' }}>
-            <img src={nav_search} alt="nav_search" />
-          </div>
-          <ul className="navbar-items">
-            <li className={`navbar-item ${selectedItem === 'contact' ? 'active' : ''}`}>
-              <Link to={'/'} onClick={() => handleItemClick('contact')}>
-                تواصل معنا
-              </Link>
-            </li>
-            <li className={`navbar-item ${selectedItem === 'about' ? 'active' : ''}`}>
-              <Link to={'/'} onClick={() => handleItemClick('about')}>
-                من نحن
-              </Link>
-            </li>
-            <li className={`navbar-item ${selectedItem === 'products' ? 'active' : ''}`}>
-              <Link to={'/'} onClick={() => handleItemClick('products')}>
-                <DropdownButton id="dropdown-basic-button" title="منتجاتنا ">
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                </DropdownButton>
-              </Link>
-              </li>
-
-            <li className={`navbar-item ${selectedItem === 'home' ? 'active' : ''}`}>
-              <Link to={'/'} onClick={() => handleItemClick('home')}>
-                الرئيسية
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-logo">
-          <img src={nav_logo} alt="nav_search" />
-        </div>
         <button
           className="menu-button"
           onClick={handleToggleClick}
@@ -110,11 +80,48 @@ const Navbar = () => {
         >
           <img src={toggle} alt="toggle" />
         </button>
+        <div className="navbar-logo">
+          <img src={nav_logo} alt="nav_search" />
+        </div>
+        <div className="list" style={{ display: 'flex', flexDirection: 'row' }}>
+          <ul className="navbar-items">
+            <li className={`navbar-item ${selectedItem === 'home' ? 'active' : ''}`}>
+              <Link to='/' onClick={() => handleItemClick('home')}>
+                الرئيسية
+              </Link>
+            </li>
+            <li className={`navbar-item ${selectedItem === 'products' ? 'active' : ''}`}>
+              <a onClick={() => handleItemClick('products')}>
+                <DropdownButton id="dropdown-basic-button" title="منتجاتنا ">
+                  <Dropdown.Item as={Link} to="/products/greengold">ذهب اخضر</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/products/malika"> مليكة</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/products/ogaro"> اوغارو</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/products/avie"> a vie</Dropdown.Item>
+                </DropdownButton>
+              </a>
+            </li>
+            <li className={`navbar-item ${selectedItem === 'about' ? 'active' : ''}`}>
+              <Link to='/about' onClick={() => handleItemClick('about')} className='MA_font_about'>
+                من نحن
+              </Link>
+            </li>
+            <li className={`navbar-item ${selectedItem === 'contact' ? 'active' : ''}`}>
+              <Link to='/contact' onClick={() => handleItemClick('contact')} className='MA_Font_Contact'>
+                تواصل معنا
+              </Link>
+            </li>
+          </ul>
+          <div className="search-logo" style={{ marginRight: '90px' }}>
+            <img src={nav_search} alt="nav_search" />
+          </div>
+        </div>
+
       </nav>
 
       <div className={`mobile_nav ${menuActive ? 'active' : ''}`}>
 
-          <div>
+        <div>
+          <div className='MA_Icon_cancel'>
             <img
               src={cancel}
               alt="cancel"
@@ -122,51 +129,67 @@ const Navbar = () => {
               onClick={handleCancelClick}
             />
 
-            <div className="nav-image">
-              <img src={logo1} alt="logo" />
-              <img src={logo2} alt="logo" />
-              <img src={logo3} alt="logo" />
-            </div>
+          </div>
 
-            <ul className="mobile_nav_items">
-              <li className={`mobile_nav_item ${selectedItem === 'home' ? 'active' : ''}`}>
-                <Link to={'/'} onClick={() => handleItemClick('home')}>
-                  الرئيسية
-                </Link>
-              </li>
-              <li className={`mobile_nav_item ${selectedItem === 'products' ? 'active' : ''}`}>
-                <Link to={'/'} onClick={() => handleItemClick('products')} >
-                  <DropdownButton id="dropdown-basic-button" title="منتجاتنا " >
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </DropdownButton>
-                </Link>
-              </li>
-              <li className={`mobile_nav_item ${selectedItem === 'about' ? 'active' : ''}`}>
-                <Link to={'/'} onClick={() => handleItemClick('about')}>
-                  من نحن
-                </Link>
-              </li>
-              <li className={`mobile_nav_item ${selectedItem === 'contact' ? 'active' : ''}`}>
-                <Link to={'/'} onClick={() => handleItemClick('contact')}>
-                  تواصل معنا
-                </Link>
-              </li>
-            </ul>
+
+          <div className="nav-image">
+            <img src={logo1} alt="logo" />
+            <img src={logo2} alt="logo" />
+            <img src={logo3} alt="logo" />
           </div>
-          <div className="mobile_nav_contact">
-            <ul>
-              <li style={{display:'flex',flexDirection:'row',gap:'15px'}}>
-                <img src={w_insta} alt="" /><img src={w_facebook} alt="" />
-              </li>
-              <li>+963 41 2020<img src={w_call} alt="" /></li>
-              <li>+963 994 640000<img src={phone} alt="" /></li>
-              <li>info@siriaherbs.com<img src={w_mail} alt="" /></li>
-            </ul>
-          </div>
+
+          <ul className="mobile_nav_items">
+            <li className={`mobile_nav_item  text_align ${selectedItem === 'home' ? 'active' : ''}`}>
+              <Link to='/' onClick={() => handleItemClick('home')}>
+                الرئيسية
+              </Link>
+            </li>
+
+            <li >
+              <div className='MA_dropdown_Products'>
+                <button onClick={() => handleOpenProducts('greengold')} className='MA_productsStyle'>المنتجات</button>
+                {isOpen && (
+                  <ul>
+                    <li className={`mobile_nav_item  ${selectedItem === 'greengold' ? 'active' : ''}`}>
+                      <Link to="/products/greengold" onClick={() => handleItemClick('greengold')}>ذهب اخضر</Link>
+                    </li>
+                    <li className={`mobile_nav_item  ${selectedItem === 'malika' ? 'active' : ''}`}>
+                      <Link to="/products/malika" onClick={() => handleItemClick('malika')} > مليكة</Link>
+                    </li>
+                    <li className={`mobile_nav_item  ${selectedItem === 'ogaro' ? 'active' : ''}`} >
+                      <Link to="/products/ogaro" onClick={() => handleItemClick('ogaro')} >اوغارو </Link>
+                    </li>
+                    <li className={`mobile_nav_item  ${selectedItem === 'avie' ? 'active' : ''}`} >
+                      <Link to="/products/avie" onClick={() => handleItemClick('avie')} >avie </Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
+            </li>
+            <li className={`mobile_nav_item text_align ${selectedItem === 'about' ? 'active' : ''}`}>
+              <Link to='/about' onClick={() => handleItemClick('about')}>
+                من نحن
+              </Link>
+            </li>
+            <li className={`mobile_nav_item text_align  ${selectedItem === 'contact' ? 'active' : ''}`}>
+              <Link to='/contact' onClick={() => handleItemClick('contact')} >
+                تواصل معنا
+              </Link>
+            </li>
+          </ul>
         </div>
-      
+        <div className="mobile_nav_contact">
+          <ul>
+            <li style={{ display: 'flex', flexDirection: 'row', gap: '15px' }}>
+              <img src={w_facebook} alt="w_facebook" /><img src={w_insta} alt="w_insta" />
+            </li>
+            <li><img src={w_call} alt="w_call" />+963 41 2020</li>
+            <li><img src={phone} alt="phone" />+963 994 640000</li>
+            <li><img src={w_mail} alt="w_mail" />info@siriaherbs.com</li>
+          </ul>
+        </div>
+      </div>
+
     </>
   );
 };
