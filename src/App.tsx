@@ -1,5 +1,6 @@
 import './App.css'
 import React from 'react';
+import Product_Section from './componnents/Product_section/Product_Section'
 import Navbar from './componnents/Navbar/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -11,6 +12,7 @@ import Ogaro from './pages/Ogaro/Ogaro';
 import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
 import NewsLetterForm from './componnents/News Letter Form/NewsLetterForm';
+
 
 
 
@@ -34,6 +36,8 @@ function App() {
     </Routes>
     
     <NewsLetterForm/>
+     <Product_Section/>
+
 
 
 
