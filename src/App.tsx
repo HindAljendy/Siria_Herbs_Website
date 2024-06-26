@@ -10,6 +10,7 @@ import GreenGold from './pages/GreenGold/GreenGold';
 import Ogaro from './pages/Ogaro/Ogaro';
 import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
+import NewsLetterForm from './componnents/News Letter Form/NewsLetterForm';
 
 
 
@@ -31,6 +32,8 @@ function App() {
       
       <Route path="/contact" element={<Contact/>}/>
     </Routes>
+    
+    <NewsLetterForm/>
 
 
 

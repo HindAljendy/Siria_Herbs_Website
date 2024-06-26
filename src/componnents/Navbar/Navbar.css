@@ -150,7 +150,7 @@ ul {
 /* /////////////////////////////////////////////// */
 .mobile_nav {
   width: 255px;
-  height: 932px;
+  height: 100% /* 932px */;
   position: fixed;
   z-index:9999 ;
   top: 0;
