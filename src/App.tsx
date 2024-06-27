@@ -12,6 +12,7 @@ import Ogaro from './pages/Ogaro/Ogaro';
 import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
 import NewsLetterForm from './componnents/News Letter Form/NewsLetterForm';
+import Store from './componnents/Store/History-Story';
 
 
 
@@ -38,6 +39,7 @@ function App() {
     <NewsLetterForm/>
      <Product_Section/>
 
+     <Store />
 
 
 
