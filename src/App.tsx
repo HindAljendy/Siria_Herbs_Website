@@ -1,7 +1,9 @@
 
 import './App.css'
 import React from 'react';
-import Footer from './componnents/Footer/Footer';
+//import Footer from './componnents/Footer/Footer';
+import Iso from './componnents/Iso/Iso';
+
 
 function App() {
 
@@ -9,7 +11,7 @@ function App() {
   return (
     <>
       <h1>Siria Herbs Website</h1>
-      <Footer />
+      <Iso />
     </>
   )
 }
