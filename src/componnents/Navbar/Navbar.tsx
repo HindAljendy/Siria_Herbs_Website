@@ -111,7 +111,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className="search-logo" style={{ marginRight: '90px' }}>
+          <div className="search-logo">
             <img src={nav_search} alt="nav_search" />
           </div>
         </div>

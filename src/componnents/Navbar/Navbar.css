@@ -141,7 +141,9 @@
   font-weight: bold;
   border-bottom: 3px solid #000;
 }
-
+.MA_navbar .search-logo{
+  margin-right: 90px;
+}
 
 ul {
   padding-left: 0 !important;
@@ -327,6 +329,10 @@ ul {
   .mobile_nav {
     right: 12.5%;
   }
+  .MA_navbar .search-logo{
+    margin-right: 0px;
+  }
+  
 }
 
 @media screen and (max-width: 826px) {
