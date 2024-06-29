@@ -46,12 +46,12 @@ function App() {
       <Route path="/contact" element={<Contact/>}/>
     </Routes>
     
-    <NewsLetterForm/>
+    {/* <NewsLetterForm/>
     <Product_Section/>
     <PrivacyPolicy/>
           <Iso />
 
-     <Store />
+     <Store /> */}
 
 
 

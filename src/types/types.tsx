@@ -5,9 +5,10 @@
 }
 
 export interface ContactSocialProps {
-    icon:string,
-    title:string,
-    details?:string
+    icon:string|undefined,
+    title:string|undefined,
+    details?:string|undefined,
+    Link?:string|undefined
 }
 
 export type TContactSocialMediaData = {

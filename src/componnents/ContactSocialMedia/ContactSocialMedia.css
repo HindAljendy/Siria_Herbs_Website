@@ -1,18 +1,20 @@
 .ra-social-section{
 
     width: 73.5724%;
-    margin:0 auto;
+    margin:100px auto;
     display: flex ;
     flex-direction: column;
     gap: 50px;
     align-items: center;
     justify-content: center;
     text-align: center;
-   
+    font-family: var(--almarai-family);
+    font-size: 1.5rem;
+    line-height: 24px;
     
 }
 
-.ra-social-contact{
+.ra-social-contact1 .ra-social-contact{
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -23,6 +25,7 @@
 
 .ra-social-contact .ra-social-div1{
     display:flex;
+    width: max-content;
     flex-direction:row;
     justify-content:center;
     align-items: center;
@@ -39,10 +42,18 @@
 }
 
 
+.ra-social-contact a{
+   text-decoration: none;
+ }
+ 
+
+
 .ra-social-contact .ra-social-div2 span{
-  font-family:var(--mulish-family);
+  font-family:var(--mulish-family) !important;
+  font-size: 1rem !important;
+  line-height: 34px !important;
    text-align: center;
-   direction:ltr;
+   direction:ltr !important;
 }
 
 .ra-social-section .ra-social-contact1{
@@ -53,7 +64,7 @@
     align-items: center;
     text-align: center;
     width: 83.880%;
-    gap: 75px;
+    
     
 
 
@@ -66,19 +77,15 @@
     
 }
 
-.ra-social-section .ra-social-contact1 .vertical-line{
-    width:max-content;
+.ra-social-section .vertical-line{
+    width:74px;
+    margin: auto;
     border:3px solid  var(--green-ogaro2);
     border-radius: 5px;
     transform: rotate(-90deg);
 }
 
-.ra-social-section .vertical-line{
-    width:74px;
-    border:3px solid  var(--green-ogaro2);
-    border-radius: 5px;
-    transform: rotate(-90deg);
-}
+
 
 
 
@@ -87,7 +94,44 @@
     display:flex;
     flex-direction:row;
     justify-content:center;
-    gap:150px;
     align-items:center;
     text-align:center;
+}
+
+
+@media screen and (max-width:992px){
+    .ra-social-section{
+
+        width: 88.372%;
+        
+        flex-direction: column;
+       
+       
+        
+    }
+
+    .ra-social-section .ra-social-contact1{
+        width: 100%;
+        flex-direction: column-reverse;
+        
+        gap:50px
+        
+        
+    }
+
+    .ra-social-section .ra-social-contact2{
+        width:100%;
+        flex-direction:column;
+        gap:50px;
+       
+    }
+
+    
+
+    .ra-social-section .vertical-line{
+        width:100%;
+       
+        transform: rotate(180deg);
+    }
+    
 }
