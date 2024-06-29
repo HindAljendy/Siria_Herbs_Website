@@ -1,0 +1,17 @@
+.na-isosection {
+    height: 60px;
+    width: 223.7px;
+    display: flex;
+    align-items: center;
+}
+
+.na-isosection img {
+    height: 30.37px;
+    width: 31.85px;
+    margin-left: 10px;
+}
+
+.na-isosection h3 {
+    margin: 0;
+    font-size: 1rem;
+}

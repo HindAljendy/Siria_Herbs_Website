@@ -1,5 +1,9 @@
 import './App.css'
 import React from 'react';
+
+//import Footer from './componnents/Footer/Footer';
+import Iso from './componnents/Iso/Iso';
+
 import Product_Section from './componnents/Product_section/Product_Section'
 import Navbar from './componnents/Navbar/Navbar';
 import { Route, Routes } from 'react-router-dom';
@@ -23,6 +27,10 @@ function App() {
 
   return (
     <>
+
+     
+    
+
     <Navbar/>
     <Routes>
       <Route path="/" element={<Home/>}/>
@@ -41,6 +49,7 @@ function App() {
     <NewsLetterForm/>
     <Product_Section/>
     <PrivacyPolicy/>
+          <Iso />
 
      <Store />
 
