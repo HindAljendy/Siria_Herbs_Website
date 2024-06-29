@@ -24,7 +24,7 @@ const SocialContact :React.FC<ContactSocialProps>= ({icon,title,details,Link}) =
       <a href={Link}><h6 style={{fontSize:'1.5rem',fontWeight:'var(--bold-weight)'}}>{title}</h6></a>
       </div>
       <div className='ra-social-div2'>
-    <span>{details}</span>
+    <p>{details}</p>
       </div>
     
     </div>

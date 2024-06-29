@@ -14,7 +14,8 @@
 
 }
 
-.ra-contact-msg-wrapper .ra-contact-msg-title {
+.ra-contact-msg-wrapper .ra-contact-msg-title h3{
+    
     line-height: 34px;
     font-size: 2rem; /*32px*/
     margin-bottom: 31px;
@@ -125,4 +126,13 @@
     border-radius: 15px;
 
 
+}
+
+
+@media screen and (max-width:992px){
+    .ra-contact-msg-wrapper .ra-contact-msg-form
+    {
+        translate: 0px 45px;
+       
+    }
 }
