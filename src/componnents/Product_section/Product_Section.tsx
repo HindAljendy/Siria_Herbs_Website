@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import React from 'react';
 import './Product_Section.css';
 import vie from './../../assets/images/home/a vie.webp';
 import malika from './../../assets/images/home/malika.webp';
