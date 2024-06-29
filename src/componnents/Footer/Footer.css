@@ -39,6 +39,8 @@
     margin: 0;
     font-size: 1.4rem;
     color: white;
+    direction: rtl;
+
 }
 
 .na-container .na-sec2,
@@ -60,6 +62,8 @@
 .na-sec4 .na-contact-item p {
     font-size: 1.4rem;
     margin-bottom: 5px;
+    margin-left: 0px;
+
 
 }
 
@@ -67,6 +71,11 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    margin-left: 100px;
+}
+.na-container .na-sec4 h4{
+    margin-left: 250px;
+
 }
 
 .na-contact-item .na-icon-container {
@@ -105,6 +114,99 @@
     margin-top: 60px;
     font-size: 16px;
 }
+
+
+.na-footer-mobile{
+    background-color: #283760;
+    height: 460px;
+    }
+
+.na-mobile-sec1 {
+    width: 100%;
+    background-color: #283760;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.na-mobile-sec1 img{
+    margin-left: 200px;
+}
+
+
+.na-mobile-sec1 p {
+    
+    font-family: --almarai-family;
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    direction: rtl;
+    margin-top:20px;
+
+}
+
+.na-mobile-sec2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    direction: rtl;
+    background-color: #283760;
+    font-size: 0.9rem;
+
+
+
+}
+
+.na-mobile-sec2 .na-mobile-part1,
+.na-mobile-sec2 .na-mobile-part2,
+.na-mobile-sec2 .na-mobile-part3 {
+    width: 30%;
+    box-sizing: border-box;
+    color: white;
+}
+
+.na-contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.na-mobile-part3 .na-contact-item .na-icon-container {
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+
+}
+.na-footer-mobile .na-line {
+    height: 1px;
+    width: 80%;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    margin-left: 50px;
+
+}
+
+
+.na-footer-mobile .na-footer-bottom p{
+    font-size: 0.8rem;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+
+}
+
+
+
+
+
 @media (max-width: 1200px) {
 
     .na-container .na-sec1,
@@ -222,3 +324,4 @@
             font-size: 0.7rem;
         }
     }
+

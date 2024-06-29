@@ -1,0 +1,92 @@
+.na-iso {
+    text-align: right;
+    direction: rtl;
+}
+
+.na-iso .na-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.na-iso .na-title h3 {
+    margin: 0;
+    justify-content: center;
+    margin-right: 50%;
+    color: #212121;
+    font-family: --almarai-family;
+    font-weight: bold;
+    font-size: 2rem
+
+}
+
+.na-iso .na-title .na-green-line {
+    width: 55%;
+    height: 2px;
+    background-color: #9BC352;
+    margin-top: 5px;
+}
+
+.na-iso .na-iso-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.na-iso .na-iso-container .na-iso-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.na-iso .na-iso-container p{
+    font-size:1.5rem;
+    font-family: --almarai-family;
+    color: #212121;
+
+}
+
+.na-iso .na-iso-container .na-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.na-iso .na-iso-container .na-icons .na-icons-part1, .na-iso .na-iso-container .na-icons .na-icons-part2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.na-iso .na-iso-container .na-read-more-button {
+    background-color: #9BC352;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.na-iso .na-iso-container .na-read-more-button .na-button-icon {
+    margin-left: 8px;
+    height: 30px;
+    width: 30px;
+    margin-top: 0;
+}
+
+@media (max-width: 450px) {
+    .na-icons-part1, .na-icons-part2 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

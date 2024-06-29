@@ -1,16 +1,15 @@
 import React from 'react'
 
 import ContactMessages from '../../componnents/ContactMessages/ContactMessages'
-
-
-
-
 function Contact() {
 
 
   return (
     <>
-     <ContactMessages/>
+    <div className='HJ_contact'>
+      <ContactMessages/>
+    </div>
+  
       
     </>
   )
