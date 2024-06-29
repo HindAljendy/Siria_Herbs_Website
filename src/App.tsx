@@ -1,15 +1,6 @@
 import './App.css'
-<<<<<<< HEAD
 
 
-import Contact from './pages/Contact/Contact';
-
-
-
-import NewsForm from './componnents/News Letter Form/NewsLetterForm'
-
-=======
->>>>>>> b90819a3298e7946ac308071e926b9e544ed0fdf
 import React from 'react';
 
 //import Footer from './componnents/Footer/Footer';
