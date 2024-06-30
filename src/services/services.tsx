@@ -12,3 +12,7 @@ export async function getSocialMediaData ():Promise<TContactSocialMediaData> {
    return response; 
     
   }
+
+
+
+ 
