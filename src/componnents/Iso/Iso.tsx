@@ -1,25 +1,29 @@
 import React from 'react';
 import './Iso.css';
-import isoimg from '../../assets/images/home/iso.webp'; 
-import Isosection from '../../componnents/Isosection/Isosection';
+import isoimg from '../../assets/images/home/iso.webp';
+
 import Icon from '../../assets/icons/butn.svg';
+import Isosection from '../IsoSection/IsoSection';
+import { Link } from 'react-router-dom';
+import TitleSection from '../TitleSection/TitleSection';
+
+
 
 
 
 const Iso = () => {
-    return(
+    return (
         <div className="na-iso">
-            <div className="na-title">
-                <h3>شهادة الآيزو 9001</h3>
-                <div className="na-green-line"></div>
-            </div>
+
+            <TitleSection title_section="شهادة الآيزو 9001" className='HJ_DirectionRight' />
+
             <div className="na-iso-container">
-                <img src={isoimg} alt="Logo" className="na-iso-image"/>
+                <img src={isoimg} alt="Logo" className="na-iso-image" />
                 <p>شهادة الآيزو لتصنيع وبيع منتجات الأعشاب الطبية الطبيعية ومنتجات العسل تتضمن عدة نقاط</p>
                 <div className="na-icons">
                     <div className="na-icons-part1">
-                        <Isosection title="الجودة والأمان" />
-                        <Isosection title="الارتقاء بالصحة والعافية" />
+                        <Isosection title="الجودة والأمان"  />
+                        <Isosection title="الارتقاء بالصحة والعافية"/>
                         <Isosection title="الاستدامة" />
                     </div>
                     <div className="na-icons-part2">
@@ -27,12 +31,15 @@ const Iso = () => {
                         <Isosection title="الامتثال للمعايير" />
                     </div>
                 </div>
-                <button className="na-read-more-button">
-                    <span>اقرأ المزيد</span>
-                    <img src={Icon} alt="Arrow" className="na-button-icon" />
-                </button>
-                
-                </div>
+
+                <Link to="/certifications">
+                    <button className="na-read-more-button">
+                        اقرأ المزيد
+                        <img src={Icon} alt="Arrow" className="na-button-icon" />
+                    </button>
+                </Link>
+
+            </div>
         </div>
     )
 }
