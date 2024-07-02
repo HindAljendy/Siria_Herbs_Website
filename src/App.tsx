@@ -11,8 +11,12 @@ import GreenGold from './pages/GreenGold/GreenGold';
 import Ogaro from './pages/Ogaro/Ogaro';
 import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
+
+
 import SectionEndPage from './componnents/SectionEndPage/SectionEndPage';
 import Certifications from './componnents/Certifications/Certifications';
+import Certification from './pages/Certification/Certification';
+
 
 
 
@@ -24,6 +28,15 @@ function App() {
 
   return (
     <>
+
+
+     
+    
+
+
+
+
+
       <Navbar />
 
       <Routes>
@@ -43,6 +56,7 @@ function App() {
         <Qoute />
 
       <SectionEndPage />
+
 
     </>
   )
