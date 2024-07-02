@@ -1,0 +1,94 @@
+.na-qoute {
+    height: 40vh; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.na-qoute .na-rectangle1 {
+    position: relative;
+    width: 85%;
+    height: 100%;
+    background-image: url('../../assets/images/home/qoute.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    gap: 20px;
+}
+
+.na-qoute .na-rectangle1 h1 {
+    font-size: 1.5rem; 
+    z-index: 2;
+    font-family: --almarai-family;
+    color: #ffffff;
+}
+
+.na-qoute .na-rectangle1 h6 {
+    font-size: 1rem; 
+    margin: 0;
+    z-index: 2;
+    font-family: --almarai-family;
+    color: #ffffff;
+}
+
+.na-qoute .na-rectangle1 .quote-icon {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    height: 60px; 
+    width: 66px;
+}
+
+@media (max-width: 768px) {
+    .na-qoute {
+        height: 40vh;
+    }
+
+    .na-qoute .na-rectangle1 h1 {
+        font-size: 1.2rem;
+    }
+
+    .na-qoute .na-rectangle1 h6 {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .na-qoute {
+        height: 50vh;
+
+
+    }
+    .na-qoute .na-rectangle1{
+        height: 50vh;
+        padding: 5px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
+
+    .na-qoute .na-rectangle1 h1 {
+        font-size: 1rem;
+    }
+
+    .na-qoute .na-rectangle1 h6 {
+        font-size: 0.8rem; 
+    }
+
+    .na-qoute .na-rectangle1 .quote-icon {
+        height: 20vh;
+        width: 20vw;
+        left: 79%;
+        top:0px;
+    }
+}

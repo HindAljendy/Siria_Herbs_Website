@@ -1,6 +1,7 @@
 import './App.css'
 import React from 'react';
 import Navbar from './componnents/Navbar/Navbar';
+import Qoute from './componnents/Qoute/Qoute';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -12,6 +13,7 @@ import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
 import SectionEndPage from './componnents/SectionEndPage/SectionEndPage';
 import Certifications from './componnents/Certifications/Certifications';
+
 
 
 
@@ -38,9 +40,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/certifications" element={<Certifications />} />
       </Routes>
+        <Qoute />
 
       <SectionEndPage />
-
 
     </>
   )
