@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './History-Story.css';
+import TitleSection from '../TitleSection/TitleSection';
 
 const Store: React.FC = () => {
   const [stories, setStories] = useState([]);
@@ -18,12 +19,14 @@ const Store: React.FC = () => {
     fetchStories();
   }, []);
 
-  return (   
-    <div className="IB_store">
-      <header className="IB_store-header">
+  return (
+    <div className="IB_store HJ_MarginSection">
+      {/*  <header className="IB_store-header">
         <h1>تاريخ وقصة سيريا لمنتجات الطبيعة</h1>
         <img src="/src/assets/images/Line 3 (1).svg" alt="" className='IB_img-line'/>
-      </header>
+      </header> */}
+      <TitleSection title_section="  تاريخ وقصة سيريا لمنتجات الطبيعة" className='HJ_DirectionRight' />
+
       {stories.map((story: any, index: number) => (
         <MediaSection
           key={story.id}
