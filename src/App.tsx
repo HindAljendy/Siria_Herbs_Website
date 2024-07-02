@@ -1,4 +1,6 @@
 import './App.css'
+
+
 import React from 'react';
 import Navbar from './componnents/Navbar/Navbar';
 import Qoute from './componnents/Qoute/Qoute';
@@ -28,6 +30,7 @@ function App() {
 
   return (
     <>
+
 
 
      
