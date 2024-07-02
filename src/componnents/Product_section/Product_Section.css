@@ -22,7 +22,7 @@
 }
 /* /////////////////////////////////////////////// */
 .MA_mobile_product{
-    width: 100vw;
+    width: 98%;
     /* height: 430px; */
     background-color: var( --white-color);
     display: flex;
