@@ -1,4 +1,6 @@
 import './App.css'
+
+
 import React from 'react';
 
 //import Footer from './componnents/Footer/Footer';
@@ -28,8 +30,6 @@ function App() {
   return (
     <>
 
-     
-    
 
     <Navbar/>
     <Routes>
@@ -46,13 +46,12 @@ function App() {
       <Route path="/contact" element={<Contact/>}/>
     </Routes>
     
-    <NewsLetterForm/>
+    {/* <NewsLetterForm/>
     <Product_Section/>
     <PrivacyPolicy/>
           <Iso />
 
-     <Store />
-
+     <Store /> */}
 
 
 
