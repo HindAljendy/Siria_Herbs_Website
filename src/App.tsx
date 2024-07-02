@@ -18,6 +18,7 @@ import Avie from './pages/Avie/Avie';
 import NewsLetterForm from './componnents/News Letter Form/NewsLetterForm';
 import Store from './componnents/Store/History-Story';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import Certification from './pages/Certification/Certification';
 
 
 
@@ -44,6 +45,7 @@ function App() {
       </Route>
       
       <Route path="/contact" element={<Contact/>}/>
+      <Route path='/certification' element={<Certification/>} />
     </Routes>
     
     <NewsLetterForm/>
