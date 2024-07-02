@@ -22,7 +22,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
-  const [menuActive, setMenuActive] =  useState<boolean>(false);
+  const [menuActive, setMenuActive] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState('');
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -118,6 +118,7 @@ const Navbar = () => {
 
       </nav>
 
+      <div className={`ShowPage ${menuActive ? '' : 'hide'}`}></div>
       <div className={`mobile_nav ${menuActive ? 'active' : ''}`}>
 
         <div>
@@ -189,6 +190,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+
 
     </>
   );
