@@ -247,7 +247,6 @@ ul {
 
 .mobile_nav.active {
   transform: translateX(50%);
-
 }
 
 .mobile_nav .mobile_nav_contact ul {
@@ -299,8 +298,21 @@ ul {
 }
 
 
+@media screen and (min-width : 993px) and (max-width:1164px) {
+  .MA_navbar .search-logo {
+    margin-right: 45px;
+  }
+}
 
 @media screen and (max-width: 992px) {
+  .ShowPage{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.25); 
+    backdrop-filter: blur(4px);
+  } 
+  
   .MA_head {
     margin: 1.14rem 1.5rem !important;
   }
