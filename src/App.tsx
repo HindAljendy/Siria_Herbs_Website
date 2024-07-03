@@ -12,9 +12,7 @@ import Ogaro from './pages/Ogaro/Ogaro';
 import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
 import NewsLetterForm from './componnents/News Letter Form/NewsLetterForm';
-
-
-
+import OurValues from './componnents/OurValues/OurValues';
 
 function App() {
 
@@ -36,8 +34,8 @@ function App() {
     </Routes>
     
     <NewsLetterForm/>
-     <Product_Section/>
-
+     {/* <Product_Section/> */}
+     <OurValues/>
 
 
 

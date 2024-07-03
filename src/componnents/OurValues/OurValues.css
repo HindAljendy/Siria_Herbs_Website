@@ -1,0 +1,107 @@
+
+ /* OurValues.css */
+.AB_values-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.AB_values-text {
+  max-width: 50%;
+}
+
+.AB_line-image {
+  margin-bottom: 10px;
+}
+
+.AB_tree-image {
+  max-width: 38.6%;
+}
+
+.AB_tree-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1366px) {
+  .AB_values-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AB_values-text, .AB_tree-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .AB_tree-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .AB_values-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AB_values-text, .AB_tree-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .AB_tree-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .AB_values-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AB_values-text, .AB_tree-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .AB_tree-image {
+    margin-top: 20px;
+  }
+
+  .AB_value-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 590px) {
+  .AB_values-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .AB_line-image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .AB_values-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .AB_line-image {
+    width: 70%;
+  }
+
+  .AB_value-item p {
+    font-size: 0.9rem;
+  }
+
+  .AB_tree-image img {
+    width: 80%;
+  }
+}
+
