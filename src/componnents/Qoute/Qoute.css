@@ -1,18 +1,19 @@
 .na-qoute {
-    height: 40vh; 
-    width: 100%; 
+    width:/* 1166px */ 90vw;
+    height: 302.56px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    margin-bottom: 200px;
 }
 
 .na-qoute .na-rectangle1 {
     position: relative;
-    width: 85%;
+    width: 90%;
     height: 100%;
-    background-image: url('../../assets/images/home/qoute.webp');
-    background-size: cover;
+    background-image: url('../../assets/images/home/qoute1.png');
+    background-size: contain;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -21,72 +22,117 @@
     text-align: center;
     color: white;
     padding: 20px;
-    gap: 20px;
+    background-repeat: no-repeat; 
+
 }
 
 .na-qoute .na-rectangle1 h1 {
     font-size: 1.5rem; 
     z-index: 2;
-    font-family: --almarai-family;
+    font-family: var(--almarai-family);
     color: #ffffff;
 }
 
 .na-qoute .na-rectangle1 h6 {
     font-size: 1rem; 
-    margin: 0;
     z-index: 2;
     font-family: var(--almarai-family);
     color: #ffffff;
+    margin-top: 30px;
 }
 
 .na-qoute .na-rectangle1 .quote-icon {
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 40px;
     height: 60px; 
     width: 66px;
 }
 
-@media (max-width: 768px) {
-    .na-qoute {
-        height: 40vh;
+@media screen and (max-width : 992px) {
+
+    .na-qoute{
+        width: 90vw;
+        background-color: white;
+
+
     }
 
+    .na-qoute .na-rectangle1 {
+        width: 90vw;
+        background-image: url('../../assets/images/home/qoute1.png');
+        background-size:contain;
+        background-position: center;
+        background-repeat: no-repeat; 
+        }
+        .na-qoute .na-rectangle1 h1 {
+            font-size: 20px;
+            font-family: var(--almarai-family);
+    
+        }
+        .na-qoute .na-rectangle1 .quote-icon {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            height: 50px; 
+            width: 55px;
+        }
+}
+@media screen and (max-width : 756px) {
     .na-qoute .na-rectangle1 h1 {
-        font-size: 1.2rem;
+        font-size: 12px;
+        font-family: var(--almarai-family);
+
+    }
+    .na-qoute .na-rectangle1 h6 {
+        font-size: 12px;
+        font-family: var(--almarai-family);
+
     }
 
-    .na-qoute .na-rectangle1 h6 {
-        font-size: 0.9rem; 
+    .na-qoute .na-rectangle1 .quote-icon {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        height: 30px; 
+        width: 35px;
     }
 }
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    .na-qoute {
+        height: 332px;
+        width:90vw;
 
 @media (max-width: 480px) {
     .na-qoute {
         height: 50vh;
+
     }
-    .na-qoute .na-rectangle1{
-        height: 50vh;
-        padding: 5px;
-        border-radius: 20px;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
+    .na-qoute .na-rectangle1 {
+    width:90vw;
+    background-image: url('../../assets/images/home/qoute2.png');
+    background-size: cover;
+    background-position: center;
 }
 
     .na-qoute .na-rectangle1 h1 {
-        font-size: 1rem;
+        font-size: 20px;
+        font-family: var(--almarai-family);
+
     }
 
     .na-qoute .na-rectangle1 h6 {
-        font-size: 0.8rem; 
+        font-size: 12px; 
     }
-
     .na-qoute .na-rectangle1 .quote-icon {
-        height: 20vh;
-        width: 20vw;
-        left: 79%;
-        top:0px;
+        height: 34px;
+        width: 45px;
+        left: 80%;
+        top: 20px;
     }
 }
