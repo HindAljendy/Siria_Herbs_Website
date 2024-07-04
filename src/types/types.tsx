@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
  export interface SectionHeaderProps {
     title:string,
     directionclass:string
@@ -12,6 +12,7 @@ export interface ContactSocialProps {
 }
 
 export type TContactSocialMediaData = {
+    data: any;
     id:string ,
     email:string,
     phone_number:string,
@@ -24,11 +25,11 @@ export type TContactSocialMediaData = {
     youtube_link:string
 
 }
-=======
+
 interface Story {
     id: number;
     description: string;
     file: string;
   }
-  
->>>>>>> b90819a3298e7946ac308071e926b9e544ed0fdf
+
+

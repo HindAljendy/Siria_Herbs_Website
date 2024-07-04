@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
                 {policies.slice(0, 1).map((policy) => (
                   <div key={policy.id} className="ne-layout-box-1">
                     <div className="ne-box-image">
-                      <img className="ne-policy-img" src={policy.icon} alt="" />
+                      <img className="ne-policy-img" src={policy.icon} alt="policy" />
                       <p className="ne-policy-number">{policy.policy_number}</p>
                     </div>
                     <div className="ne-box-contents">
@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
                 {policies.slice(0, 1).map((policy) => (
                   <div key={policy.id} className="ne-layout-box-1">
                     <div className="ne-box-image">
-                      <img className="ne-policy-img" src={policy.icon} alt="" />
+                      <img className="ne-policy-img" src={policy.icon} alt="policy" />
                       <p className="ne-policy-number">{policy.policy_number}</p>
                     </div>
                     <div className="ne-box-contents">
@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
                 {policies.map((policy, index) => (
                   <div key={policy.id} className={`ne-layout-box-1-${index + 1}`}>
                     <div className="ne-box-image">
-                      <img className="ne-policy-img" src={policy.icon} alt="" />
+                      <img className="ne-policy-img" src={policy.icon} alt="policy" />
                       <p className="ne-policy-number">{policy.policy_number}</p>
                     </div>
                     <div className="ne-box-contents">
@@ -126,7 +126,7 @@ const PrivacyPolicy = () => {
                   policies.map((policy) => (
                     <div key={policy.id} className="ne-multy-box">
                       <div className="ne-box-image">
-                        <img className="ne-policy-img" src={policy.icon} alt="" />
+                        <img className="ne-policy-img" src={policy.icon} alt="policy" />
                         <p className="ne-policy-number">{policy.policy_number}</p>
                       </div>
                       <div className="ne-box-contents">

@@ -21,10 +21,7 @@ const Store: React.FC = () => {
 
   return (
     <div className="IB_store HJ_MarginSection">
-      {/*  <header className="IB_store-header">
-        <h1>تاريخ وقصة سيريا لمنتجات الطبيعة</h1>
-        <img src="/src/assets/images/Line 3 (1).svg" alt="" className='IB_img-line'/>
-      </header> */}
+      
       <TitleSection title_section="  تاريخ وقصة سيريا لمنتجات الطبيعة" className='HJ_DirectionRight' />
 
       {stories.map((story: any, index: number) => (
@@ -32,7 +29,7 @@ const Store: React.FC = () => {
           key={story.id}
           file={story.file}
           text={<HighlightedText text={story.description} />}
-          reverse={index % 2 === 1}
+          reverse={index % 2 === 0}
         />
       ))}
     </div>
@@ -62,7 +59,6 @@ const MediaSection: React.FC<MediaSectionProps> = ({ file, text, reverse }) => {
         return (
           <video controls className="IB_section-video" controlsList="nodownload">
             <source src={file} type={`video/${fileExtension}`} />
-            Your browser does not support the video tag.
           </video>
         );
       default:
@@ -71,11 +67,15 @@ const MediaSection: React.FC<MediaSectionProps> = ({ file, text, reverse }) => {
   };
 
   return (
-    <div className={`IB_section ${reverse ? 'reverse' : ''}`}>
-      {renderMedia(file)}
-      <div className="IB_section-text">
-        {text}
+    <div className="IB_section"  >
+      <div  className={`HJ_container_Store  ${reverse ? 'reverse Margin' : ''}`}>
+        {renderMedia(file)}
+        <div className="IB_section-text">
+          {text}
+        </div>
+
       </div>
+
     </div>
   );
 };

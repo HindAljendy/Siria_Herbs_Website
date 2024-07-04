@@ -35,7 +35,7 @@
     font-size: 1rem; 
     margin: 0;
     z-index: 2;
-    font-family: --almarai-family;
+    font-family: var(--almarai-family);
     color: #ffffff;
 }
 
@@ -64,8 +64,6 @@
 @media (max-width: 480px) {
     .na-qoute {
         height: 50vh;
-
-
     }
     .na-qoute .na-rectangle1{
         height: 50vh;
