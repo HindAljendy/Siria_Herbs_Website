@@ -1,18 +1,31 @@
 import React from 'react';
-import './Isosection.css';
-import isoicon from '../../assets/icons/leaf.svg'; 
+import './IsoSection.css';
+import iso_icon from '../../assets/icons/leaf.svg';
 
-interface IsosectionProps {
+interface IsoSectionProps {
     title: string;
 }
 
-const Isosection: React.FC<IsosectionProps> = ({ title }) => {
+const Isosection: React.FC<IsoSectionProps> = ({ title }) => {
     return (
         <div className="na-isosection">
-            <img src={isoicon} alt="Logo" />
-            <h3>{title}</h3>
+            <img src={iso_icon} alt="Logo" />
+            <span className='NA_title_Iso'>{title}</span>
         </div>
-    );
+    )
 }
 
-export default Isosection;
+export default Isosection
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -102,10 +102,16 @@
 
 
 
+
 @media screen and (max-width: 576px) {
     .na-qoute {
         height: 332px;
         width:90vw;
+
+@media (max-width: 480px) {
+    .na-qoute {
+        height: 50vh;
+
     }
     .na-qoute .na-rectangle1 {
     width:90vw;
