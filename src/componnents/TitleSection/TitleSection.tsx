@@ -15,7 +15,6 @@ const TitleSection: React.FC<PropsTitleSection> = ({ title_section , className }
                     <div className="na-green-line_Right"></div>
                 </div>
             </div>
-
         </div>
 
 

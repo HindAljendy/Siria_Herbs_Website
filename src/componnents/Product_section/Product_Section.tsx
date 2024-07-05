@@ -26,7 +26,7 @@ const Product_Section = () => {
   };
 
   return (
-    <div className='HJ_MarginSection'>
+    <div className='HJ_Margin'>
       <TitleSection title_section="  منتجاتنا" className='HJ_DirectionLeft' />
 
       {isMobile ? (

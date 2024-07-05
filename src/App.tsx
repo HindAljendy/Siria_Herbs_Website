@@ -1,9 +1,6 @@
 import './App.css'
-
-
 import React from 'react';
 import Navbar from './componnents/Navbar/Navbar';
-import Qoute from './componnents/Qoute/Qoute';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -14,13 +11,8 @@ import Ogaro from './pages/Ogaro/Ogaro';
 import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
 
-
 import SectionEndPage from './componnents/SectionEndPage/SectionEndPage';
-import Certifications from './componnents/Certifications/Certifications';
 import Certification from './pages/Certification/Certification';
-
-
-
 
 
 
@@ -30,14 +22,6 @@ function App() {
 
   return (
     <>
-
-
-
-     
-    
-
-
-
 
 
       <Navbar />
@@ -54,11 +38,11 @@ function App() {
         </Route>
 
         <Route path="/contact" element={<Contact />} />
-        <Route path="/certifications" element={<Certifications />} />
+        <Route path="/certifications" element={<Certification />} />
       </Routes>
-        <Qoute />
 
-      <SectionEndPage />
+
+      <SectionEndPage /> 
 
 
     </>

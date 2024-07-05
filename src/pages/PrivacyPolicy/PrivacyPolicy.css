@@ -47,6 +47,8 @@
     line-height: 40px;
     font-size: 20px;
     font-family: var(--almarai-family);
+
+    color: var(--dark-black);
   }
   /* ======================
   ===================================
@@ -149,6 +151,8 @@
     line-height: 40px;
     font-size: 20px;
     font-family: var(--almarai-family);
+    color: var(--dark-black);
+    
   }
   
   @media (max-width: 1200px) {

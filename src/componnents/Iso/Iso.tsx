@@ -13,7 +13,7 @@ import TitleSection from '../TitleSection/TitleSection';
 
 const Iso = () => {
     return (
-        <div className="na-iso">
+        <div className="na-iso HJ_MarginSection_Iso HJ_MarginSection">
 
             <TitleSection title_section="شهادة الآيزو 9001" className='HJ_DirectionRight' />
 

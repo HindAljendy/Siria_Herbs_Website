@@ -1,8 +1,16 @@
-.HJ_contact
-{
-background-image: url("../../assets/images/contact/top-view-green-leaves\ 2.png");
-background-size: 736.97px 907px;
-background-position-x: -460px;
-background-position-y: 460px;
-background-repeat: no-repeat;
+
+.HJ_contact{
+    margin-bottom: 18%;
+}
+
+@media screen and (max-width: 992px) {
+    .HJ_contact{
+        margin-bottom: 25%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .HJ_contact{
+        margin-bottom: 40%;
+    }
+
 }
