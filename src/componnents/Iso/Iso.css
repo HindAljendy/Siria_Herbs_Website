@@ -1,3 +1,5 @@
+
+
 .na-iso-container {
     display: flex;
     flex-direction: column;
@@ -74,7 +76,9 @@ a {
 }
 
 @media screen and (max-width : 992px) {
-    
+    .HJ_MarginSection_Iso{
+        margin-top: 100%;
+    }
     .na-iso .na-iso-container .na-iso-image {
         width: 300px;
         margin-block: 35px 25px;

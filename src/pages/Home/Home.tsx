@@ -4,7 +4,7 @@ import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy'
 import Iso from '../../componnents/Iso/Iso'
 import Store from '../../componnents/Store/History-Story'
 import Evaluations from '../../componnents/Evaluations/Evaluations'
-import Qoute from '../../componnents/Qoute/Qoute'
+
 
 const Home = () => {
   return (
@@ -15,8 +15,7 @@ const Home = () => {
       <Iso />
       <PrivacyPolicy />
   
-      <Qoute/>
-      
+    
 
     </>
   )
