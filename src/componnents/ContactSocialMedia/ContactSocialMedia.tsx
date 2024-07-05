@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './ContactSocialMedia.css'
-
 import whatsapp from '../../assets/icons/whatsapp.svg'
 import call from '../../assets/icons/call.svg'
 import facebook from '../../assets/icons/facebook.svg'
-
 import instagram from '../../assets/icons/insta.svg'
-
 import { ContactSocialProps, TContactSocialMediaData } from '../../types/types';
 import { getSocialMediaData } from '../../services/services'
 

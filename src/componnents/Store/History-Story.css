@@ -72,14 +72,14 @@
 
   .IB_store .HJ_container_Store .IB_section-text p {
     margin-bottom: 0px;
-    font-size: 22px;
+    font-size: 18px;
     width: 99%;
     height: 100%;
     text-align: start;
   }
 
   .IB_store .HJ_container_Store .IB_highlight {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .IB_store .HJ_container_Store .IB_section-image,
@@ -99,7 +99,7 @@
   }
 
   .IB_store .HJ_container_Store .IB_highlight {
-    font-size: 32px;
+    font-size: 22px;
   }
 
   .IB_store .HJ_container_Store .IB_section-image,

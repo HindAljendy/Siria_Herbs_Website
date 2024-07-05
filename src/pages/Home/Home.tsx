@@ -3,14 +3,20 @@ import Product_Section from '../../componnents/Product_section/Product_Section'
 import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy'
 import Iso from '../../componnents/Iso/Iso'
 import Store from '../../componnents/Store/History-Story'
+import Evaluations from '../../componnents/Evaluations/Evaluations'
+import Qoute from '../../componnents/Qoute/Qoute'
 
 const Home = () => {
   return (
     <>
       <Product_Section />
+      <Store />
+      <Evaluations/>
       <Iso />
       <PrivacyPolicy />
-      <Store />
+  
+      <Qoute/>
+      
 
     </>
   )

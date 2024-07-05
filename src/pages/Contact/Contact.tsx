@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Contact.css'
 import ContactMessages from '../../componnents/ContactMessages/ContactMessages'
 import ContactSocialMedia from '../../componnents/ContactSocialMedia/ContactSocialMedia'
 import ContactHero from '../../componnents/ContactHero/ContactHero'
