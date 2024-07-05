@@ -17,7 +17,7 @@ import Avie from './pages/Avie/Avie';
 
 import SectionEndPage from './componnents/SectionEndPage/SectionEndPage';
 import Certifications from './componnents/Certifications/Certifications';
-import Certification from './pages/Certification/Certification';
+//import Certification from './pages/Certification/Certification';
 
 
 
@@ -32,9 +32,6 @@ function App() {
     <>
 
 
-
-     
-    
 
 
 

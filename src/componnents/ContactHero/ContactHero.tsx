@@ -3,7 +3,6 @@ import './ContactHero.css'
 const ContactHero = () => {
   return (
     <div className='ra-contact-hero'>
-         
   
     <div className='ra-hero-rectangle'/>
     <div className='ra-contact-info'>

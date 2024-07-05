@@ -1,10 +1,9 @@
 import React from 'react';
 import './Iso.css';
 import isoimg from '../../assets/images/home/iso.webp';
-
 import Icon from '../../assets/icons/butn.svg';
-import Isosection from '../IsoSection/IsoSection';
 import { Link } from 'react-router-dom';
+import Isosection from '../Isosection/Isosection';
 import TitleSection from '../TitleSection/TitleSection';
 
 

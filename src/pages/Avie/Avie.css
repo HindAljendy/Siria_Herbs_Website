@@ -1,0 +1,15 @@
+.na-avie{
+    width: 1372px;
+
+}
+.na-avie .na-top-view{
+    width: 100% ;
+    height: 594px;
+    display: flex;
+    background-image: url('../../assets/images/a vie/top-view-assortment-spices-wooden-board 3.webp');
+    background-size: contain;
+    background-repeat: no-repeat; 
+
+    
+}
+
