@@ -5,6 +5,7 @@ import ContactSocialMedia from '../../componnents/ContactSocialMedia/ContactSoci
 import ContactHero from '../../componnents/ContactHero/ContactHero'
 import NewsLetterForm from '../../componnents/News Letter Form/NewsLetterForm'
 import Footer from '../../componnents/Footer/Footer'
+import './Contact.css'
 function Contact() {
 
 
