@@ -4,6 +4,7 @@ import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy'
 import Iso from '../../componnents/Iso/Iso'
 import Store from '../../componnents/Store/History-Story'
 import Evaluations from '../../componnents/Evaluations/Evaluations'
+import Quote from '../../componnents/Quote/Quote'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Evaluations/>
       <Iso />
       <PrivacyPolicy />
+      <Quote/>
   
     
 
