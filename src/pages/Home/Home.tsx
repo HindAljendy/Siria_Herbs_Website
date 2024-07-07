@@ -13,7 +13,7 @@ const Home = () => {
       <Product_Section />
       <Store />
       <Evaluations/>
-      <Iso />
+      {/* <Iso /> */}
       <PrivacyPolicy />
       <Quote/>
   
