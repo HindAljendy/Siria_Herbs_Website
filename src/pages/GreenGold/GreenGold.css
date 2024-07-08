@@ -1,0 +1,17 @@
+.ra-green-gold-products{
+    display:flex;
+    flex-direction:column;
+    width:85.358%;
+    margin:0 auto;
+    align-items:center;
+    text-align:center;
+    
+}
+
+
+@media screen and (max-width:992px) {
+
+    .ra-green-gold-products{
+        width:73.2258%;
+    }
+}
