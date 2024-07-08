@@ -1,5 +1,5 @@
 import React from 'react';
-import './IsoSection.css';
+import './Isosection.css';
 import iso_icon from '../../assets/icons/leaf.svg';
 
 interface IsoSectionProps {

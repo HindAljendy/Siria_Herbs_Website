@@ -1,22 +1,19 @@
-import React from 'react'
-import './Contact.css'
-import ContactMessages from '../../componnents/ContactMessages/ContactMessages'
-import ContactSocialMedia from '../../componnents/ContactSocialMedia/ContactSocialMedia'
-import ContactHero from '../../componnents/ContactHero/ContactHero'
+import React from "react";
+import "./Contact.css";
+import ContactMessages from "../../componnents/ContactMessages/ContactMessages";
+import ContactSocialMedia from "../../componnents/ContactSocialMedia/ContactSocialMedia";
+import ContactHero from "../../componnents/ContactHero/ContactHero";
+
 function Contact() {
-
-
   return (
     <>
-    <div className='HJ_contact'>
-      <ContactHero/>
-      <ContactSocialMedia/>
-      <ContactMessages/>
-    </div>
-  
-      
+      <div className="HJ_contact">
+        <ContactHero />
+        <ContactSocialMedia />
+        <ContactMessages />
+      </div>
     </>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
