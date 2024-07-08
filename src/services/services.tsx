@@ -37,6 +37,15 @@ export async function getProductsDependOnCategory(brand:number,category:number):
 }
 
 
+export async function getColorofBrand(brand:number):Promise<string[]>{
 
+        const response = await axios.get(`http://127.0.0.1:8000/api/brand/${brand}/site`).then(res=>
+                
+                { 
+                
+                console.log(res.data.data.color)
+                 return res.data.data.categories[category-1]});
+        return response;
+}
 
 
