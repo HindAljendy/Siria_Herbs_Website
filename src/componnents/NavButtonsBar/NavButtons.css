@@ -20,6 +20,12 @@
 }
 
 
+.ra_nav_filterbuttons .active-button{
+    border: none;
+    background: none;
+    text-decoration: underline;
+}
+
 @media screen and (max-width:1124px) {
 
     .ra_nav_filterbuttons{

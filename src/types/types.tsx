@@ -33,6 +33,7 @@ interface Story {
   }
 
   export type NavButtonsBarProps ={
-    categories:string[]
+    categories:string[],
+
   }
 
