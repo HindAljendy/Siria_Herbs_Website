@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import NavButtonsBar from '../../componnents/NavButtonsBar/NavButtonsBar';
+import NavButtonsBar from '../../componnents/Products/Products';
 import { getCategoriesforBrand } from '../../services/services';
 
 const Avie = () => {

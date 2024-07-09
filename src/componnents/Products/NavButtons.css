@@ -26,6 +26,18 @@
     text-decoration: underline;
 }
 
+
+.ra-products{
+    display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap:110px;
+   width: 100%;
+   align-items: center;
+   margin:0 auto;
+   text-align: center;
+}
+
 @media screen and (max-width:1124px) {
 
     .ra_nav_filterbuttons{
@@ -36,6 +48,13 @@
 
 @media screen and (max-width:992px) {
 
+
+
+        .ra-products{
+            flex-direction: column;
+            padding:10px;
+          
+        }
     .ra_nav_filterbuttons {
         width:88.83%;
         flex-wrap:wrap;

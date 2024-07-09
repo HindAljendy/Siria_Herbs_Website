@@ -31,8 +31,8 @@ export async function getProductsDependOnCategory(brand:number,category:number):
                 
                 { 
                 
-                console.log(res.data.data.categories[category-1].products)
-                 return res.data.data.categories[category-1]});
+               // console.log(res.data.data.categories[category-1].products)
+                 return res.data.data.categories[category-1].products});
         return response;
 }
 
@@ -43,8 +43,8 @@ export async function getColorofBrand(brand:number):Promise<string[]>{
                 
                 { 
                 
-                console.log(res.data.data.color)
-                 return res.data.data.categories[category-1]});
+               // console.log(res.data.data.color)
+                 return res.data.data.color});
         return response;
 }
 
