@@ -12,7 +12,7 @@ const Avie = () => {
     })
       },[]);
   
-   
+  
     return (
       <div className='ra-green-gold-products'>
         <NavButtonsBar categories={categories}/>

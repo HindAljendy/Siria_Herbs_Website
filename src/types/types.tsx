@@ -1,5 +1,5 @@
 
- export interface SectionHeaderProps {
+export interface SectionHeaderProps {
     title:string,
     directionclass:string
 }
@@ -25,6 +25,21 @@ export type TContactSocialMediaData = {
     youtube_link:string
 
 }
+export interface NavigationLinksProps {
+  navigateMain: string;
+  navigateLink: string;
+  navigateSubmain: string;
+  navigateSubmain2:string;
+
+}
+
+export interface BigNavigationLinksProps {
+  navigateMain: string;
+  navigateLinkMain: string;
+  navigateLinkSubmain: string;
+  navigateSubmain: string;
+}
+
 
 interface Story {
     id: number;
