@@ -20,6 +20,10 @@
     gap: 5rem;
     position: relative;
     transform: translateY(100%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 .MA_hero .box .image{
     width: 30%;
