@@ -39,7 +39,7 @@ const ProductDetails = () => {
                 <NavigationLinks
                     navigateMain='الرئيسية'
                     navigateLink=' المنتجات' navigateSubmain='a vie'
-                    navigateSubmain2='للتنحيف وإنقاص الوزن'
+                    navigateSubmain2='للتنحيف و إنقاص الوزن'
                 />
             </div>
 
