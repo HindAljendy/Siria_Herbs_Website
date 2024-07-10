@@ -3,9 +3,10 @@ import './Iso.css';
 import isoimg from '../../assets/images/home/iso.webp';
 
 import Icon from '../../assets/icons/butn.svg';
-import Isosection from '../Isosection/Isosection';
+
 import { Link } from 'react-router-dom';
 import TitleSection from '../TitleSection/TitleSection';
+import Isosection from '../Isosection/Isosection';
 
 
 
