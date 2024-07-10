@@ -44,9 +44,17 @@
         width: 39.68%;
         font-size: 0.93rem;
     }
+  
 
    
 }
 
+@media screen and (max-width:1124px)  {
 
+    
+      .ra-product h3{
+          font-size: 1.25rem;
+      }
+     
+  }
 
