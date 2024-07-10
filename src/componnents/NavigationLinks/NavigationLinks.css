@@ -11,11 +11,9 @@
 .Navigate-main {
     color: var(--gray-color);
     font-family: var(--almarai-family);
-    font-size: 1.5rem /* 24px */;
-    font-weight: var(--bold-weight);
+    font-size: 1rem /* 24px */;
     line-height: 26.78px;
     padding-left: 8px;
-    border-left: 1px solid var(--gray-color);
 
 }
 

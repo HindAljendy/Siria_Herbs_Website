@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './Products.css'
- import { ProductsProps, TProduct } from '../../types/types';
+
 import { getBrandData, getProductsDependOnCategory } from '../../services/services';
 import Product from '../Product/Product';
-
-
-
-
+import { ProductsProps } from '../../types/types';
 
 
 const Products:React.FC<ProductsProps>= ({brand_id,brandColor}) => {
@@ -48,36 +45,35 @@ getProductsDependOnCategory(brand_id,index).then(products =>{
         
          
             <button className={buttonClass}  value={category.name} key={index}   onClick={()=> handlecategory(index)}>
+
               {category.name}
             </button>
-       )
-  })}
-    </div>
-    <div className='ra-products-line'/>
-      
+          )
+        })}
+      </div>
+      <div className='ra-products-line' />
 
-    <div className='ra-products'>
-      {
 
-      products?.map((product)=>{
-        return(
-        <Product main_image={product.main_image} name={product.name} color={brandColor}/>)
-      })
+      <div className='ra-products'>
+        {
 
-      }
-    
-             
-          
-   
-  
-  </div>
+
+          products?.map((value: string) => {
+            return (
+              <Product main_image={value} name={value} color={brandColor} />
+            )
+          })
+
+        }
+
+      </div>
 
 
 
-  </>
-  
-  
-)  
+    </>
+
+
+  )
 }
 
 export default Products

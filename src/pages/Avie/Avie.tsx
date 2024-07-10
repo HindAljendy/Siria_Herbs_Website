@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
-
 import { getBrandData } from '../../services/services';
-import Products from '../Products/Products';
+import Products from '../../componnents/Products/Products';
+
 
 
 const Avie = () => {
-   
+
   const [brandcolor,setBrandcolor]=useState('');
   const [brandId,setBrandId]=useState();
+
   useEffect(()=>{
-    getBrandData(2).then((brand)=>{
+    getBrandData(2).then((brand:any)=>{
       console.log(brand)
         setBrandcolor(brand.color)
         setBrandId(brand.id)
@@ -27,7 +28,7 @@ const Avie = () => {
   )
 
 
-      },[]);
+ 
   
 
 }
