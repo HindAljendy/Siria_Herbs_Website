@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import useWindowSize from "../../useWindowSize "; // Import the custom hook
+import { FaAngleDoubleLeft } from "react-icons/fa";
 
 interface Product {
   id?: number;
@@ -79,7 +80,7 @@ const ProductSlider = () => {
                   >
                     {product.name}
                   </p>
-                  <button className="ne_product_info">مزيد من التفاصيل</button>
+                  <button className="ne_product_info"> <FaAngleDoubleLeft className='fa-angle-icon'/>مزيد من التفاصيل</button>
                 </div>
               ))}
             </div>

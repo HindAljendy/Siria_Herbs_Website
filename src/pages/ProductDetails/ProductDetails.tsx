@@ -42,9 +42,9 @@ const ProductDetails = () => {
             <div className="na-product-image">
                 <img src={product.image} alt={product.title} />
                 <div className="na-product-thumbnails">
-                    {product.thumbnails.map((thumbnail, index) => (
+                    {/* {product.thumbnails.map((thumbnail, index) => (
                         <img key={index} src={thumbnail} alt={`Thumbnail ${index + 1}`} />
-                    ))}
+                    ))} */}
                 </div>
             </div>
 
