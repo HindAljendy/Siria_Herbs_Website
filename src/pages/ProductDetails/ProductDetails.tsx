@@ -5,6 +5,7 @@ import { LuLink } from "react-icons/lu";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { BsFacebook } from "react-icons/bs";
 import NavigationLinks from '../../componnents/NavigationLinks/NavigationLinks';
+import ProductSlider from '../../componnents/ProductSlider/ProductSlider';
 
 const ProductDetails = () => {
     const [product, setProduct] = useState({
@@ -71,6 +72,7 @@ const ProductDetails = () => {
                 </div>
             </div>
         </div>
+        <ProductSlider/>
         </>
     );
 };
