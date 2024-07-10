@@ -5,6 +5,7 @@ import { LuLink } from "react-icons/lu";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { BsFacebook } from "react-icons/bs";
 import NavigationLinks from '../../componnents/NavigationLinks/NavigationLinks';
+import ProductSlider from '../../componnents/ProductSlider/ProductSlider';
 
 const ProductDetails = () => {
     const [product, setProduct] = useState({
@@ -41,9 +42,9 @@ const ProductDetails = () => {
             <div className="na-product-image">
                 <img src={product.image} alt={product.title} />
                 <div className="na-product-thumbnails">
-                    {product.thumbnails.map((thumbnail, index) => (
+                    {/* {product.thumbnails.map((thumbnail, index) => (
                         <img key={index} src={thumbnail} alt={`Thumbnail ${index + 1}`} />
-                    ))}
+                    ))} */}
                 </div>
             </div>
 
@@ -71,6 +72,7 @@ const ProductDetails = () => {
                 </div>
             </div>
         </div>
+        <ProductSlider/>
         </>
     );
 };
