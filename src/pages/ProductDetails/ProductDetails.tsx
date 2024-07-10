@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import productImagePlaceholder from '../../assets/images/a vie/product3.webp';
 import './ProductDetails.css';
 import { LuLink } from "react-icons/lu";
@@ -7,25 +9,25 @@ import { BsFacebook } from "react-icons/bs";
 import NavigationLinks from '../../componnents/NavigationLinks/NavigationLinks';
 
 const ProductDetails = () => {
+    const { productId } = useParams();
     const [product, setProduct] = useState({
-        image: productImagePlaceholder,
-        title: "للتنحيف و إنقاص الوزن",
-        description: "شاي أخضر سوري مع التوت البري",
-        details: "خلطة طبيعية ومدعمة للتنحيف وإنقاص الوزن",
-        brand: "a vie",
-        id: "8",
+        main_image: productImagePlaceholder,
+        name: "للتنحيف و إنقاص الوزن",
+        subname1: "شاي أخضر سوري مع التوت البري",
+        product_description: "خلطة طبيعية ومدعمة للتنحيف وإنقاص الوزن",
+        brand_id: "a vie",
+        code_number: "8",
         weight: "50 g",
-        packaging: "معبأة في كيس نايلون وعلبة كرتون خاصة",
-        quantity: "10",
-        thumbnails: [productImagePlaceholder, productImagePlaceholder, productImagePlaceholder]
+        packaging_description: "معبأة في كيس نايلون وعلبة كرتون خاصة",
+        count_each_package: "10",
+        additional_image: [productImagePlaceholder, productImagePlaceholder, productImagePlaceholder]
     });
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/products')
-            .then(response => response.json())
-            .then(data => setProduct(data))
+        axios.get(`http://127.0.0.1:8000/api/products/${productId}`)
+            .then(response => setProduct(response.data))
             .catch(error => console.error('Error fetching the product data:', error));
-    }, []);
+    }, [productId]);
 
     return (
         <>
@@ -39,24 +41,24 @@ const ProductDetails = () => {
 
         <div className="na-product-details">
             <div className="na-product-image">
-                <img src={product.image} alt={product.title} />
+                <img src={product.main_image} alt={product.name} />
                 <div className="na-product-thumbnails">
-                    {product.thumbnails.map((thumbnail, index) => (
+                    {product.additional_image.map((thumbnail, index) => (
                         <img key={index} src={thumbnail} alt={`Thumbnail ${index + 1}`} />
                     ))}
                 </div>
             </div>
 
             <div className="na-product-info">
-                <h1>{product.title}</h1>
-                <p>{product.description}</p>
-                <h5>{product.details}</h5>
+                <h1>{product.name}</h1>
+                <p>{product.subname1}</p>
+                <h5>{product.product_description}</h5>
                 <ul>
-                    <li>ماركة: <span>{product.brand}</span></li>
-                    <li>رقم المنتج: <span>{product.id}</span></li>
+                    <li>ماركة: <span>{product.brand_id}</span></li>
+                    <li>رقم المنتج: <span>{product.code_number}</span></li>
                     <li>الوزن: <span>{product.weight}</span></li>
-                    <li>التغليف: <span>{product.packaging}</span></li>
-                    <li>العدد في الطرد: <span>{product.quantity}</span></li>
+                    <li>التغليف: <span>{product.packaging_description}</span></li>
+                    <li>العدد في الطرد: <span>{product.count_each_package}</span></li>
                 </ul>
                 <div className="na-contact-product">
                     <button className="na-call-button">
