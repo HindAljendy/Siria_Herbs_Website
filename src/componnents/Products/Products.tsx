@@ -9,9 +9,8 @@ import { ProductsProps } from '../../types/types';
 const Products:React.FC<ProductsProps>= ({brand_id,brandColor}) => {
   const [categories,setCategories]=useState<Array<string>>([]);
    const [products,setProducts]=useState([]);
-   //const [selectedstyle,setSelectedStyle]=useState('filterbutton');
    const [activeIndex,setActiveIndex]=useState<number|null>(null);
-   //const [product,setProduct]=useState();
+   
 
 
 useEffect(()=>{
@@ -29,12 +28,13 @@ useEffect(()=>{
   const handlecategory = (index:number) =>{
          
     setActiveIndex(index)
-         
-
-getProductsDependOnCategory(brand_id,index).then(products =>{
-
+    getProductsDependOnCategory(brand_id,index).then(products =>{
           setProducts(products); })
+
        }
+
+
+
  return(
 <>
     <div className="ra_nav_filterbuttons">

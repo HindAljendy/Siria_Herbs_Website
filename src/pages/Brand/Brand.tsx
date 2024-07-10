@@ -1,24 +1,31 @@
-import React, { useEffect, useState } from 'react'
-import { getBrandData } from '../../services/services'
-
-import Products from '../../componnents/Products/Products';
-import { TBrand } from '../../types/types';
+import React from 'react'
 
 
-const Brand :React.FC<any>= ({brandId,brand_color}) => {
+
+const Brand = () => {
+  // const {itemId}  = useParams<{ itemId: string; }>();
+  // const [data, setData] = useState<TBrandData>();
+  // const [categoryId, setCategoryId] = useState<number>();
+
+
+  //     useEffect(() => {
+  //       axios.get('http://127.0.0.1:8000/api/brand/1/site')
+  //           .then((response) => setData(response.data.data))
+  //           .then(() => console.table(data))
+          
+  //         },[])
+
+      
     
-    const [brandcolor,setBrandColor]=useState('');
-    const  [bbrandId,setBrandId]=useState();
-    useEffect(()=>{
-
-      setBrandId(brandId);
-      setBrandColor(brand_color)
-    },[])
+    // const getProductsDependOnCategory = (categoryId: number) => {
+    //   setProductDepentOnCategory(data?.categories[categoryId].products)
+    // console.log(data)
+    // console.log(productDepentOnCategory)
 
 
-  return (
-    <div className='ra-brand-products'>
-      <Products  brand_id={bbrandId} brandColor={brandcolor}/>
+      return (
+    <div>
+      Brand
     </div>
   )
 }

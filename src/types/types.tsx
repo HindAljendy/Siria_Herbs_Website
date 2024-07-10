@@ -48,9 +48,9 @@ export interface Story {
   }
 
   export interface ProductsProps {
-     brand_id:number,
-    brandColor:string
-
+     brand_id:number|undefined,
+    brandColor:string|undefined
+    
   }
   export interface TProduct {
   main_image?:string,
@@ -58,7 +58,26 @@ export interface Story {
   color?:string
 }
 
-export interface TBrand {
-  brandId:number,
-  brand_color?:string
+export type TCategoryData = {
+  id: number;
+  name: string;
+  products: TProductData[]
+}
+
+export type TProductData = {
+  id: number;
+  name: string;
+  main_image: string;
+}
+
+
+export type TBrandData = {
+  brandId?: number|undefined;
+  name?: string;
+  description?: string;
+  brand_color?: string;
+  background_image?: string;
+  presentation_image?: string;
+  main_image?: string;
+  categories?: TCategoryData[]
 }
