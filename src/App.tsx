@@ -11,8 +11,9 @@ import Ogaro from './pages/Ogaro/Ogaro';
 import Malika from './pages/Malika/Malika';
 import Avie from './pages/Avie/Avie';
 
-import SectionEndPage from './componnents/SectionEndPage/SectionEndPage';
+//import SectionEndPage from './componnents/SectionEndPage/SectionEndPage';
 import Certification from './pages/Certification/Certification';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 
 
 
@@ -25,6 +26,7 @@ function App() {
 
 
       <Navbar />
+      <ProductDetails />
 
       <Routes>
         <Route path="/" element={<Home />} />
