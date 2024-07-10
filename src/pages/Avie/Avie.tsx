@@ -1,24 +1,36 @@
 import React, { useEffect, useState } from 'react'
-import NavButtonsBar from '../../componnents/NavButtonsBar/NavButtonsBar';
-import { getCategoriesforBrand } from '../../services/services';
+import { getBrandData } from '../../services/services';
+import Products from '../../componnents/Products/Products';
+
+
 
 const Avie = () => {
-  const [categories,setCategories]=useState<Array<string>>([]);
-  const [products,setProducts]=useState({});
+
+  const [brandcolor,setBrandcolor]=useState('');
+  const [brandId,setBrandId]=useState();
+
   useEffect(()=>{
-    getCategoriesforBrand(2).then(data=>{
-      setCategories(data);
-      
+    getBrandData(2).then((brand:any)=>{
+      console.log(brand)
+        setBrandcolor(brand.color)
+        setBrandId(brand.id)
     })
-      },[]);
+
+},[])
+
+ 
+
+ 
+  return (
+    <div className='ra-green-gold-products'>
+        <Products  brand_id={brandId} brandColor={brandcolor}/>
+    </div>
+  )
+
+
+ 
   
-  
-    return (
-      <div className='ra-green-gold-products'>
-        <NavButtonsBar categories={categories}/>
-        
-  
-      </div>)
+
 }
 
 export default Avie

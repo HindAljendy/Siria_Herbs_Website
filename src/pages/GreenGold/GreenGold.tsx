@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import './GreenGold.css'
-//import NavButtonsBar from '../../componnents/NavButtonsBar/NavButtonsBar'
-import Products  from '../../componnents/Products/Products'
-import { getCategoriesforBrand} from '../../services/services';
-import NavButtonsBar from '../../componnents/NavButtonsBar/NavButtonsBar';
+import Products from '../../componnents/Products/Products'
 
+import { getBrandData } from '../../services/services'
 
 
 const GreenGold = () => {
-const [categories,setCategories]=useState<Array<string>>([]);
-const [products,setProducts]=useState({});
-useEffect(()=>{
-  getCategoriesforBrand(1).then(data=>{
-    setCategories(data);
-    
-  })
-    },[]);
+
+  const [brandcolor,setBrandcolor]=useState('');
+  useEffect(()=>{
+    getBrandData(1).then((brand)=>{
+        setBrandcolor(brand.color)
+    })
+},[])
+
+ 
 
  
   return (
     <div className='ra-green-gold-products'>
-      <NavButtonsBar categories={categories}/>
-      <Products/>
-
+        <Products  brand_id={1} brandColor={brandcolor}/>
     </div>
   )
 }
