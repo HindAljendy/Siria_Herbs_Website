@@ -8,12 +8,16 @@ import { TProduct } from '../../types/types';
 
 
 const Product:React.FC<TProduct>= ({main_image,name,color}) =>{
+  const mystyle={
+    backgroundColor:`${color}`,
+  }
+ 
   return (
     <div className='ra-product'>
       <img src={main_image}/>
       <h3>{name}</h3>
       
-        <button style={{backgroundColor:'#153D1F'}}>   عرض التفاصيل <FaAngleDoubleLeft className='fa-angle-icon'/> </button>
+        <button style={mystyle}>   عرض التفاصيل <FaAngleDoubleLeft className='fa-angle-icon'/> </button>
        
      
       

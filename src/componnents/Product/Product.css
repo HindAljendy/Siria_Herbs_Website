@@ -25,7 +25,9 @@
     font-weight: var(--bold-weight);
 }
 
-
+.ra-product img{
+    width: 100%;
+}
 
 .ra-product button{
     font-family: var(--almarai-family);

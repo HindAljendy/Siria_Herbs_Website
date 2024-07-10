@@ -1,3 +1,4 @@
+
 .ra_nav_filterbuttons{
     display:flex;
     flex-direction:row;
@@ -7,11 +8,12 @@
     gap:100px;
     margin:auto;
     margin-top:45px;
-    margin-bottom:71px;
+    
     font-family:var(--almarai-family);
     font-size:1.5rem;
     font-weight:var(--normal-weight);
     width:100%;
+   
 
 }
 .ra_nav_filterbuttons .filterbutton{
@@ -21,14 +23,20 @@
 
 
 .ra_nav_filterbuttons .active-button{
-    border: none;
+    border: none ;
+    border-bottom:3px solid var(--deep-green);
     background: none;
-    text-decoration: underline;
+    
 }
 
+.ra-products-line{
+    border:2px solid var(--deep-green);
+    width: 100%;
+    margin:0 auto
+}
 
 .ra-products{
-    display:flex;
+   display:flex;
    flex-direction: row;
    flex-wrap: wrap;
    gap:110px;

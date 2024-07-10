@@ -38,7 +38,12 @@ interface Story {
 
   }
 export type TProduct ={
-  main_image:string,
-  name:string,
+  main_image?:string,
+  name?:string,
   color?:string
+}
+
+export type TBrand ={
+  brandId:number,
+  brand_color?:string
 }
