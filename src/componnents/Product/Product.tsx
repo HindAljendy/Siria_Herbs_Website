@@ -8,6 +8,8 @@ import { TProduct } from '../../types/types';
 
 
 const Product:React.FC<TProduct>= ({main_image,name,color}) =>{
+
+ 
   const mystyle={
     backgroundColor:`${color}`,
   }
