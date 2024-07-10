@@ -41,24 +41,24 @@ export interface BigNavigationLinksProps {
 }
 
 
-interface Story {
+export interface Story {
     id: number;
     description: string;
     file: string;
   }
 
-  export type ProductsProps ={
-    brand_id:number,
+  export interface ProductsProps {
+     brand_id:number,
     brandColor:string
 
   }
-export type TProduct ={
+  export interface TProduct {
   main_image?:string,
   name?:string,
   color?:string
 }
 
-export type TBrand ={
+export interface TBrand {
   brandId:number,
   brand_color?:string
 }

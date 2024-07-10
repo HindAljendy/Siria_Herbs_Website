@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { getBrandData } from '../../services/services'
-import { TBrand } from '../../types/types'
-import Products from '../Products/Products'
 
-const Brand :React.FC<TBrand>= ({brandId,brand_color}) => {
+import Products from '../../componnents/Products/Products';
+import { TBrand } from '../../types/types';
+
+
+const Brand :React.FC<any>= ({brandId,brand_color}) => {
     
     const [brandcolor,setBrandColor]=useState('');
     const  [bbrandId,setBrandId]=useState();
