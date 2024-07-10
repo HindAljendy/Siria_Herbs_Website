@@ -47,8 +47,18 @@ interface Story {
     file: string;
   }
 
-  export type NavButtonsBarProps ={
-    categories:string[],
+  export type ProductsProps ={
+    brand_id:number,
+    brandColor:string
 
   }
+export type TProduct ={
+  main_image?:string,
+  name?:string,
+  color?:string
+}
 
+export type TBrand ={
+  brandId:number,
+  brand_color?:string
+}
