@@ -14,6 +14,7 @@ const Avie = () => {
         setBrandcolor(brand.color)
         setBrandId(brand.id)
     })
+
 },[])
 
  
@@ -24,6 +25,10 @@ const Avie = () => {
         <Products  brand_id={brandId} brandColor={brandcolor}/>
     </div>
   )
+
+
+      },[]);
+  
 
 }
 
