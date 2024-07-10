@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { Hero } from '../../componnents/Product_Hero/Hero';
 
 
 type TBrandData = {
@@ -47,7 +48,14 @@ const BrandPage = () => {
 
 
     return (
-        <div>Brand</div>
+        <div>
+           <Hero
+                name={data?.name || ''}
+                description={data?.description || ''}
+                backgroundImage={data?.background_image || ''} 
+                brandImage={data?.presentation_image || ''} 
+            />
+        </div>
     );
 }
 
