@@ -12,16 +12,15 @@ import Product from '../Product/Product';
 const Products:React.FC<ProductsProps>= ({brand_id,brandColor}) => {
   const [categories,setCategories]=useState<Array<string>>([]);
    const [products,setProducts]=useState([]);
-   const [selectedstyle,setSelectedStyle]=useState('filterbutton');
+   //const [selectedstyle,setSelectedStyle]=useState('filterbutton');
+   const [activeIndex,setActiveIndex]=useState<number|null>(null);
    //const [product,setProduct]=useState();
 
 
 useEffect(()=>{
     
   getBrandData(brand_id).then((brand)=>{
-    //console.log(brand.categories)
-    setCategories(brand.categories);
-   // console.log(brand.categories[0].products)
+  setCategories(brand.categories);
     setProducts(brand.categories[0].products); 
   })
    
@@ -30,30 +29,25 @@ useEffect(()=>{
     ,[]);
 
   
-  const handlecategory = (e) =>{
-            
-       
-    if (selectedstyle === "filterbutton") 
-      {
-        setSelectedStyle("active-button");
+  const handlecategory = (index:number) =>{
+         
+    setActiveIndex(index)
+         
 
-      }
-        else {
-          setSelectedStyle("filterbutton");
-        }    
-
-getProductsDependOnCategory(brand_id,e.target.id).then(products =>{
+getProductsDependOnCategory(brand_id,index).then(products =>{
 
           setProducts(products); })
        }
  return(
 <>
     <div className="ra_nav_filterbuttons">
-    {categories?.map((category)=>{
+    {categories?.map((category,index)=>{
+
+      const buttonClass= activeIndex === index ? 'active-button' : 'filterbutton';
     return (
         
          
-            <button className={selectedstyle}  value={category.name} id={category.id} onClick={handlecategory}>
+            <button className={buttonClass}  value={category.name} key={index}   onClick={()=> handlecategory(index)}>
               {category.name}
             </button>
        )

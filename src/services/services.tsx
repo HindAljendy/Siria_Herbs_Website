@@ -33,6 +33,6 @@ export async function getBrandData(brand:number):Promise<string[]>{
                 { 
                 
                
-                 return res.data.data.categories[category-1].products});
+                 return res.data.data.categories[category].products});
         return response;
 }
