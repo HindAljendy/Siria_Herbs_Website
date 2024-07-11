@@ -4,6 +4,7 @@
     direction: rtl;
     background-size: cover; 
     background-position: center; 
+
     background-repeat: no-repeat; 
     padding: 3.7rem;
 
@@ -11,7 +12,6 @@
 .MA_hero .box{
     width: 85%;
     margin: 0 auto;
-    padding: 3.7rem 3.7rem;
     backdrop-filter: blur(76px);
     border-radius: 30px;
     height: max-content;

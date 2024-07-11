@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ name, description, backgroundImage,b
    
     <div className='MA_hero' style={mystyle}>
 
-  return (
+
     
       <div className='box'>
         <div className='image'>
