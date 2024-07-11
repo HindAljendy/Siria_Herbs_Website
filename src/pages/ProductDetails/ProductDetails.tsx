@@ -7,7 +7,7 @@ import { LuLink } from "react-icons/lu";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { BsFacebook } from "react-icons/bs";
 import NavigationLinks from '../../componnents/NavigationLinks/NavigationLinks';
-import ProductSlider from '../../componnents/ProductSlider/ProductSlider';
+
 
 const ProductDetails = () => {
     const { productId } = useParams();
@@ -32,7 +32,7 @@ const ProductDetails = () => {
         axios.get(`http://127.0.0.1:8000/api/products/${productId}`)
             .then(response => setProduct(response.data))
             .catch(error => console.error('Error fetching the product data:', error));
-    }, [productId]);
+    }, [productId]); 
 
     return (
         <>
@@ -118,7 +118,8 @@ const ProductDetails = () => {
                         </div>
                     )}
                 </div>
-            </div>
+            </div> 
+            
         </>
 
     );
