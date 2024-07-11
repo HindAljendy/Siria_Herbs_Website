@@ -1,4 +1,6 @@
+
 import React, { useEffect, useState } from 'react'
+ import { Hero } from '../../componnents/Product_Hero/Hero';
 import { TBrandData} from '../../types/types';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -57,6 +59,7 @@ const BrandPage = () => {
 
       return (
     <div className='ra-brand'>
+<<<<<<< HEAD
     
            <Hero
                 name={brandName}
@@ -67,6 +70,16 @@ const BrandPage = () => {
        
    
     {/*  /////////////////////////////////////////////// */}
+=======
+     <div>
+           <Hero
+                name={brandData?.name || ''}
+                description={brandData?.description || ''}
+                backgroundImage={brandData?.background_image || ''} 
+                brandImage={brandData?.presentation_image || ''} 
+            />
+        </div>
+>>>>>>> 776ad726134098e961b6c5a6975a35797323e245
       
       <div className="ra_nav_filterbuttons">
         {categories?.map((category,index)=>{
@@ -83,7 +96,6 @@ const BrandPage = () => {
             })}
       </div>
 
-{/*  /////////////////////////////////////////////// */}
       <div className='ra-products'>
 
       {
@@ -101,3 +113,7 @@ const BrandPage = () => {
 }
 
 export default BrandPage
+
+
+
+
