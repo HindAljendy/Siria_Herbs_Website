@@ -1,25 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './GreenGold.css'
-import Products from '../../componnents/Products/Products'
-
-import { getBrandData } from '../../services/services'
+import BrandPage from '../Brand/BrandPage'
 
 
 const GreenGold = () => {
 
-  const [brandcolor,setBrandcolor]=useState('');
-  useEffect(()=>{
-    getBrandData(1).then((brand)=>{
-        setBrandcolor(brand.color)
-    })
-},[])
-
- 
-
  
   return (
     <div className='ra-green-gold-products'>
-        <Products  brand_id={1} brandColor={brandcolor}/>
+
+      <BrandPage/>
+
     </div>
   )
 }

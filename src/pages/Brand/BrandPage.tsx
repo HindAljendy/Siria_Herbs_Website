@@ -1,67 +1,97 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react'
+ import { Hero } from '../../componnents/Product_Hero/Hero';
+import { TBrandData} from '../../types/types';
 import { useParams } from 'react-router-dom';
-import { Hero } from '../../componnents/Product_Hero/Hero';
+import axios from 'axios';
+import Product from '../../componnents/Product/Product';
+import './Brand.css'
 
-
-type TBrandData = {
-    id: number;
-    name: string;
-    description: string;
-    color: string;
-    background_image: string;
-    presentation_image: string;
-    main_image: string;
-    categories: TCategoryData[]
-}
-
-type TCategoryData = {
-    id: number;
-    name: string;
-    products: TProdactData[]
-}
-
-type TProdactData = {
-    id: number;
-    name: string;
-    main_image: string;
-}
 
 const BrandPage = () => {
+  const {itemId}  = useParams<{ itemId: string; }>();
+  const [brandData, setBrandData] = useState<TBrandData>();
+   const [categories,setCategories]=useState([]);
+   const [brandColor,setBrandColor]=useState('');
+   const [products,setProducts]=useState([]);
+   const [activeIndex,setActiveIndex]=useState<number|null>(null);
+   
 
-    const { itemId } = useParams<{ itemId: string; }>();
-    const [data, setData] = useState<TBrandData>();
-    const [productDepentOnCategory, setProductDepentOnCategory] = useState<TProdactData[] | undefined>([]);
-    
-    useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/brand/${itemId}/site`)
-            .then((response) => setData(response.data.data))
-            .then(() => console.table(data));
-    }, []);
 
-    const getProductsDependOnCategory = (categoryId: number) => {
-        setProductDepentOnCategory(data?.categories[categoryId].products)
+
+      useEffect(() => {
+            axios.get('http://127.0.0.1:8000/api/brand/1/site')
+            .then((response) => {
+              setBrandData(response.data.data)
+              setCategories(response.data.data.categories)
+              setBrandColor(response.data.data.color)
+              
+
+            })
+            .then(() => console.table(brandData))
+          
+          
+          },[])
+           
+   
+
+    const getProductsDependOnCategory = (category: number) => {
+      
+      setProducts(brandData.categories[category].products)
+   
+
+     }
+
+
+    const handlecategory = (index:number) =>{
+         
+      setActiveIndex(index)
+    getProductsDependOnCategory(index)
     }
 
-    // console.log(data)
-    console.log(productDepentOnCategory)
-
-
-    return (
-        <div>
+      return (
+    <div className='ra-brand'>
+     <div>
            <Hero
-                name={data?.name || ''}
-                description={data?.description || ''}
-                backgroundImage={data?.background_image || ''} 
-                brandImage={data?.presentation_image || ''} 
+                name={brandData?.name || ''}
+                description={brandData?.description || ''}
+                backgroundImage={brandData?.background_image || ''} 
+                brandImage={brandData?.presentation_image || ''} 
             />
         </div>
-    );
+      
+      <div className="ra_nav_filterbuttons">
+        {categories?.map((category,index)=>{
+
+          const buttonClass= activeIndex === index ? 'active-button' : 'filterbutton';
+        return (
+            
+            
+                <button className={buttonClass}  value={category.name} key={index} onClick={()=> handlecategory(index)}>
+
+                  {category.name}
+                </button>
+              )
+            })}
+      </div>
+
+      <div className='ra-products'>
+
+      {
+       products?.map((value: string) => {
+            return (
+              <Product main_image={value.main_image} name={value.name} color={brandColor} />
+            )
+        })
+
+}
+       </div>
+
+    </div>
+  )
 }
 
 export default BrandPage
-
-
 
 
 

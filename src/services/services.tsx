@@ -15,23 +15,26 @@ export async function getSocialMediaData(): Promise<TContactSocialMediaData> {
 }
 
 
-export async function getBrandData(brand:number):Promise<string[]>{
+export async function getBrandData(brand:number|undefined):Promise<string[]>{
 
                 const response = await axios.get(`http://127.0.0.1:8000/api/brand/${brand}/site`).then(res=>
                         
                         { 
                                 return res.data.data
                         });
+
+                        
                 return response;
+
         }
 
- export async function getProductsDependOnCategory(brand:number,category:number):Promise<string[]>{
+//  export async function getProductsDependOnCategory(brand:number|undefined,category:number):Promise<string[]>{
 
-        const response = await axios.get(`http://127.0.0.1:8000/api/brand/${brand}/site`).then(res=>
+//         const response = await axios.get(`http://127.0.0.1:8000/api/brand/${brand}/site`).then(res=>
                 
-                { 
+//                 { 
                 
                
-                 return res.data.data.categories[category-1].products});
-        return response;
-}
+//                  return res.data.data.categories[category].products});
+//         return response;
+// }

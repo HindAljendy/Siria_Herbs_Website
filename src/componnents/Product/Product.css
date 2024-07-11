@@ -1,13 +1,3 @@
-/* .ra-products{
-   display:flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   gap:110px;
-   width: 100%;
-   align-items: center;
-   margin:0 auto;
-   text-align: center;
-} */
 
 
 .ra-product{
@@ -33,7 +23,8 @@
     font-family: var(--almarai-family);
     font-size: 0.8rem;
     color: var(--white-color);
-    width: 51.11%;
+    width: 81.08%;
+    padding:10px;
     text-align: center;
     align-items: center;
     border-radius: 10px;
@@ -53,9 +44,17 @@
         width: 39.68%;
         font-size: 0.93rem;
     }
+  
 
    
 }
 
+@media screen and (max-width:1124px)  {
 
+    
+      .ra-product h3{
+          font-size: 1.25rem;
+      }
+     
+  }
 
