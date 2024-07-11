@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { TBrandData} from '../../types/types';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Product from '../../componnents/Product/Product';
+import  background from '../../assets/images/bunch-fresh-mint-female-hands 1.png'
 import './Brand.css'
+import { Hero } from '../../componnents/Product_Hero/Hero';
+import Product from '../../componnents/Product/Product';
 
 
 const BrandPage = () => {
@@ -11,7 +13,11 @@ const BrandPage = () => {
   const [brandData, setBrandData] = useState<TBrandData>();
    const [categories,setCategories]=useState([]);
    const [brandColor,setBrandColor]=useState('');
+   const [brandName,setBrandName]=useState('');
+   const [brandDescription,setBrandDescription]=useState('');
    const [products,setProducts]=useState([]);
+   const [backgroundImg,setBackgroundImg]=useState('');
+   const [presentation_image,setpresentation_image]=useState('');
    const [activeIndex,setActiveIndex]=useState<number|null>(null);
    
 
@@ -23,8 +29,10 @@ const BrandPage = () => {
               setBrandData(response.data.data)
               setCategories(response.data.data.categories)
               setBrandColor(response.data.data.color)
-              
-
+              setBackgroundImg(response.data.data.background_image)
+              setBrandName(response.data.data.name)
+              setBrandDescription(response.data.data.description)
+              setpresentation_image(response.data.data.presentation_image)
             })
             .then(() => console.table(brandData))
           
@@ -49,7 +57,16 @@ const BrandPage = () => {
 
       return (
     <div className='ra-brand'>
-
+    
+           <Hero
+                name={brandName}
+                description={brandDescription}
+                backgroundImage={background} 
+                brandImage={presentation_image} 
+            />
+       
+   
+    {/*  /////////////////////////////////////////////// */}
       
       <div className="ra_nav_filterbuttons">
         {categories?.map((category,index)=>{
