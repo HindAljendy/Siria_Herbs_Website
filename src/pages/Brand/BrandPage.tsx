@@ -19,6 +19,7 @@ const BrandPage = () => {
    const [brandDescription,setBrandDescription]=useState('');
    const [products,setProducts]=useState([]);
    const [backgroundImg,setBackgroundImg]=useState('');
+   const [mainImg,setmainImg]=useState('');
    const [presentation_image,setpresentation_image]=useState('');
    const [activeIndex,setActiveIndex]=useState<number|null>(null);
    
@@ -35,6 +36,7 @@ const BrandPage = () => {
               setBrandName(response.data.data.name)
               setBrandDescription(response.data.data.description)
               setpresentation_image(response.data.data.presentation_image)
+              setmainImg(response.data.data.main_image)
             })
             .then(() => console.table(brandData))
           
@@ -59,28 +61,18 @@ const BrandPage = () => {
 
       return (
     <div className='ra-brand'>
-<<<<<<< HEAD
+
     
            <Hero
                 name={brandName}
                 description={brandDescription}
-                backgroundImage={background} 
-                brandImage={presentation_image} 
+                backgroundImage={presentation_image} 
+                brandImage={mainImg} 
             />
        
    
     {/*  /////////////////////////////////////////////// */}
-=======
-     <div>
-           <Hero
-                name={brandData?.name || ''}
-                description={brandData?.description || ''}
-                backgroundImage={brandData?.background_image || ''} 
-                brandImage={brandData?.presentation_image || ''} 
-            />
-        </div>
->>>>>>> 776ad726134098e961b6c5a6975a35797323e245
-      
+   
       <div className="ra_nav_filterbuttons">
         {categories?.map((category,index)=>{
 
