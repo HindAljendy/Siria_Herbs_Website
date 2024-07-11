@@ -104,16 +104,12 @@ const About = () => {
 
 
       {/* all creative  */}
-   <div className="all-creative">
-       <div className="title">مميزون معاً</div>
-       <img src={creative} alt="" />
-   </div>
+      <div className="all-creative">
+        <div className="title">مميزون معاً</div>
+        <img src={creative} alt="" />
+      </div>
 
 
-  {/* fixed subscripe  */}
-    <NewsLetterForm/>
-      {/* Footer  */}
-      <Footer />
     </>
 
   )

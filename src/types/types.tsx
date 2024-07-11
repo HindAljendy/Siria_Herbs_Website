@@ -1,5 +1,5 @@
 
- export interface SectionHeaderProps {
+export interface SectionHeaderProps {
     title:string,
     directionclass:string
 }
@@ -25,15 +25,59 @@ export type TContactSocialMediaData = {
     youtube_link:string
 
 }
+export interface NavigationLinksProps {
+  navigateMain: string;
+  navigateLink: string;
+  navigateSubmain: string;
+  navigateSubmain2:string;
 
-interface Story {
+}
+
+export interface BigNavigationLinksProps {
+  navigateMain: string;
+  navigateLinkMain: string;
+  navigateLinkSubmain: string;
+  navigateSubmain: string;
+}
+
+
+export interface Story {
     id: number;
     description: string;
     file: string;
   }
 
-  export type NavButtonsBarProps ={
-    categories:string[],
-
+  export interface ProductsProps {
+     brand_id:number|undefined,
+    brandColor:string|undefined
+    
   }
+  export interface TProduct {
+  main_image?:string,
+  name?:string,
+  color?:string
+}
 
+export type TCategoryData = {
+  id: number;
+  name: string;
+  products: TProductData[]
+}
+
+export type TProductData = {
+  id: number;
+  name: string;
+  main_image: string;
+}
+
+
+export type TBrandData = {
+  brandId?: number|undefined;
+  name?: string;
+  description?: string;
+  brand_color?: string;
+  background_image?: string;
+  presentation_image?: string;
+  main_image?: string;
+  categories?: TCategoryData[]
+}

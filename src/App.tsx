@@ -13,6 +13,7 @@ import Avie from './pages/Avie/Avie';
 
 import SectionEndPage from './componnents/SectionEndPage/SectionEndPage';
 import Certification from './pages/Certification/Certification';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 
 
 
@@ -25,6 +26,7 @@ function App() {
 
 
       <Navbar />
+      {/* <ProductDetails /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -35,6 +37,7 @@ function App() {
           <Route path="/products/ogaro" element={<Ogaro />} />
           <Route path="/products/malika" element={<Malika />} />
           <Route path="/products/avie" element={<Avie />} />
+          <Route path="/products/productDetails" element={<ProductDetails/>} />
         </Route>
 
         <Route path="/contact" element={<Contact />} />
@@ -42,7 +45,7 @@ function App() {
       </Routes>
 
 
-      {/* <SectionEndPage />  */}
+      <SectionEndPage />
 
 
     </>

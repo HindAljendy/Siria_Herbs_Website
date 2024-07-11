@@ -5,15 +5,17 @@ import Iso from '../../componnents/Iso/Iso'
 import Store from '../../componnents/Store/History-Story'
 import Evaluations from '../../componnents/Evaluations/Evaluations'
 import Quote from '../../componnents/Quote/Quote'
+import Hero from '../../componnents/Hero/Hero'
 
 
 const Home = () => {
   return (
     <>
+      <Hero/>
       <Product_Section />
       <Store />
       <Evaluations/>
-      {/* <Iso /> */}
+      <Iso /> 
       <PrivacyPolicy />
       <Quote/>
   
