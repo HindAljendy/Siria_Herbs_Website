@@ -1,6 +1,6 @@
 import React from 'react'
 import './GreenGold.css'
-import Brand from '../Brand/Brand'
+import BrandPage from '../Brand/BrandPage'
 
 
 const GreenGold = () => {
@@ -9,7 +9,7 @@ const GreenGold = () => {
   return (
     <div className='ra-green-gold-products'>
 
-      <Brand/>
+      <BrandPage/>
 
     </div>
   )

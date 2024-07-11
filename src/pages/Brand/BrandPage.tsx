@@ -6,10 +6,9 @@ import Product from '../../componnents/Product/Product';
 import './Brand.css'
 
 
-const Brand = () => {
+const BrandPage = () => {
   const {itemId}  = useParams<{ itemId: string; }>();
   const [brandData, setBrandData] = useState<TBrandData>();
- // const [productDepentOnCategory, setProductDepentOnCategory] = useState<TProductData[] | undefined >([]);
    const [categories,setCategories]=useState([]);
    const [brandColor,setBrandColor]=useState('');
    const [products,setProducts]=useState([]);
@@ -24,7 +23,7 @@ const Brand = () => {
               setBrandData(response.data.data)
               setCategories(response.data.data.categories)
               setBrandColor(response.data.data.color)
-               //console.log((response.data.data.color))
+              
 
             })
             .then(() => console.table(brandData))
@@ -51,21 +50,7 @@ const Brand = () => {
       return (
     <div className='ra-brand'>
 
-        {/* <div className='MA_hero' style={{ backgroundImage: `url(${img1})` }}>
-                <div className='box'>
-                    <div className='image'>
-                        <img src={img2} alt="" />
-                    </div>
-                    <div className='text'>
-                        <h2>صحتك دهَب</h2>
-                        <p>
-                        ذهب أخضر السوري يمثل  كافة النباتات والأعشاب الطبيعية السورية من البادية والجبل والساحل وغوطة الشام وسهل حوران.
-                        تشكيلة واسعة من المنتجات الطبيعية بالنكهة السورية الخاصة.
-                        جمعت بعناية ومحبة بأيدي وخبرات سورية.
-                        </p>
-                    </div>
-                </div>
-        </div> */}
+      
       <div className="ra_nav_filterbuttons">
         {categories?.map((category,index)=>{
 
@@ -98,4 +83,4 @@ const Brand = () => {
   )
 }
 
-export default Brand
+export default BrandPage
