@@ -75,6 +75,10 @@
     color: var(--white-color);
 }
 
+.na-container .na-sec3 .MA_paragraph {
+    cursor: pointer;
+}
+
 .na-container .na-sec4 .na-contact-item {
     display: flex;
 }

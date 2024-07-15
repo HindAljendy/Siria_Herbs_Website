@@ -10,8 +10,8 @@ import NavigationLinks from '../../componnents/NavigationLinks/NavigationLinks';
 
 
 const ProductDetails = () => {
-    const { productId } = useParams();
     const [product, setProduct] = useState({
+        
         main_image: productImagePlaceholder,
         name: "للتنحيف و إنقاص الوزن",
         subname1: "شاي أخضر سوري مع التوت البري",
@@ -28,12 +28,6 @@ const ProductDetails = () => {
     });
     const [activeSection, setActiveSection] = useState('components');
 
-    useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/products/${productId}`)
-            .then(response => setProduct(response.data))
-            .catch(error => console.error('Error fetching the product data:', error));
-    }, [productId]); 
-
     return (
         <>
             <div className="na-nav-product">
@@ -44,20 +38,23 @@ const ProductDetails = () => {
                 />
             </div>
 
+
             <div className="na-product-details">
-                <div className="na-product-image">
-                    <img src={product.main_image} alt={product.name} />
-                    <div className="na-product-thumbnails">
-                        {product.additional_image.map((thumbnail, index) => (
-                            <img key={index} src={thumbnail} alt={`Thumbnail ${index + 1}`} />
-                        ))}
+                <div className='HJ_PartOne'>
+                    <div className="na-product-image">
+                        <img src={product.main_image} alt={product.name} />
+                        <div className="na-product-thumbnails">
+                            {product.additional_image.map((thumbnail, index) => (
+                                <img key={index} src={thumbnail} alt={`Thumbnail ${index + 1}`} />
+                            ))}
+                        </div>
                     </div>
 
 
                     <div className="na-product-info">
                         <h1>{product.name}</h1>
                         <p>{product.subname1}</p>
-                        <h5>{product.product_description}</h5>
+                        <span>{product.product_description}</span>
                         <ul>
                             <li>ماركة: <span>{product.brand_id}</span></li>
                             <li>رقم المنتج: <span>{product.code_number}</span></li>
@@ -78,48 +75,56 @@ const ProductDetails = () => {
                         </div>
                     </div>
                 </div>
+                <div className='HJ_PartTwo'>
+
+                    <div className="na-tabs">
+                        <span
+                            onClick={() => setActiveSection('components')}
+                            className={activeSection === 'components' ? 'active' : ''}
+                        >
+                            المكونات
+                        </span>
+                        <span
+                            onClick={() => setActiveSection('description')}
+                            className={activeSection === 'description' ? 'active' : ''}
+                        >
+                            الوصف
+                        </span>
+                        <span
+                            onClick={() => setActiveSection('brand')}
+                            className={activeSection === 'brand' ? 'active' : ''}
+                        >
+                            العلامة التجارية
+                        </span>
+                    </div>
 
 
-                <div className="na-tabs">
-                    <span
-                        onClick={() => setActiveSection('components')}
-                        className={activeSection === 'components' ? 'active' : ''}
-                    >
-                        المكونات
-                    </span>
-                    <span
-                        onClick={() => setActiveSection('description')}
-                        className={activeSection === 'description' ? 'active' : ''}
-                    >
-                        الوصف
-                    </span>
-                    <span
-                        onClick={() => setActiveSection('brand')}
-                        className={activeSection === 'brand' ? 'active' : ''}
-                    >
-                        العلامة التجارية
-                    </span>
+
+
+                    <div className="na-tab-content">
+                        {activeSection === 'components' && (
+                            <div>
+                                {product.description_component}
+                            </div>
+                        )}
+                        {activeSection === 'description' && (
+                            <div>
+                                {product.subname2}
+                            </div>
+                        )}
+                        {activeSection === 'brand' && (
+                            <div>
+                                {product.category_id}
+                            </div>
+                        )}
+                    </div>
+
                 </div>
 
-                <div className="na-tab-content">
-                    {activeSection === 'components' && (
-                        <div>
-                            {product.description_component}
-                        </div>
-                    )}
-                    {activeSection === 'description' && (
-                        <div>
-                            {product.subname2}
-                        </div>
-                    )}
-                    {activeSection === 'brand' && (
-                        <div>
-                            {product.category_id}
-                        </div>
-                    )}
-                </div>
-            </div> 
-            
+
+
+            </div>
+
         </>
 
     );

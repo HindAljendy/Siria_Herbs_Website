@@ -3,6 +3,7 @@ import iso_logo from "../../assets/images/Certification/isologo.svg";
 import iso_img from "../../assets/images/Certification/box-two-image.png";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { ColorContext } from '../../Contexts/ColorContext';
 
 
 interface Certification {
@@ -15,6 +16,8 @@ interface Certification {
   }
 const Certification = () => {
     const [Certifications,setCertifications]=useState<Certification[]>([]);
+    const { setBrandColor } = React.useContext(ColorContext);
+
     useEffect(() => {
         axios
           .get("http://127.0.0.1:8000/api/certifications")
@@ -25,6 +28,7 @@ const Certification = () => {
           .catch((error) => {
             console.error(error);
           });
+          setBrandColor('#283760')
       }, []);
   return (
     <div className="ne-iso">

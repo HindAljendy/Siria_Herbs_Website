@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import nav_logo from '../../assets/images/home/nav_logo.webp';
 import nav_search from '../../assets/images/home/Icon.svg';
@@ -16,15 +16,35 @@ import logo3 from '../../assets/images/home/Group (2).svg';
 import phone from '../../assets/icons/phone.svg';
 import cancel from '../../assets/icons/x.svg';
 import toggle from '../../assets/icons/toggle.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+import { ColorContext } from '../../Contexts/ColorContext';
+
+
+type TBrandData = {
+  id: number,
+  name: string
+}
 
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState('');
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [brandData, setBrandData] = useState<TBrandData[]>([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    axios.get('http://127.0.0.1:8000/api/brands-published')
+      .then((res) => setBrandData(res.data.data))
+      .catch((err) => console.error(err))
+      .finally(() => console.log(brandData));
+  }, []);
+
+
 
   const handleOpenProducts = (item: React.SetStateAction<string>) => {
     setIsOpen((prevState) => !prevState);
@@ -43,11 +63,18 @@ const Navbar = () => {
     setMenuActive((prevState) => !prevState);
   };
 
+  const handeleClickOnBrand = (id: number) => {
+    navigate(`/brands/${id}`);
+  }
 
+  const { brandColor } = React.useContext(ColorContext);
+  const mystyle = {
+    backgroundColor: `${brandColor}`
+  }
 
   return (
     <>
-      <div className={`MA_head ${menuActive ? 'hide' : ''}`}>
+      <div style={mystyle} className={`MA_head ${menuActive ? 'hide' : ''}`}>
         <ul>
           <li>
             <span>info@siriaherbs.com</span>
@@ -93,10 +120,12 @@ const Navbar = () => {
             <li className={`navbar-item ${selectedItem === 'products' ? 'active' : ''}`}>
               <a onClick={() => handleItemClick('products')}>
                 <DropdownButton id="dropdown-basic-button" title="منتجاتنا ">
-                  <Dropdown.Item as={Link} to="/products/greengold">ذهب اخضر</Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/products/malika"> مليكة</Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/products/ogaro"> اوغارو</Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/products/avie"> a vie</Dropdown.Item>
+                  {brandData.map((item) => {
+                    return (
+                      <Dropdown.Item key={item.id} onClick={() => handeleClickOnBrand(item.id)}>{item.name}</Dropdown.Item>
+
+                    )
+                  })}
                 </DropdownButton>
               </a>
             </li>
@@ -151,18 +180,14 @@ const Navbar = () => {
                 <button onClick={() => handleOpenProducts('greengold')} className='MA_productsStyle'>المنتجات</button>
                 {isOpen && (
                   <ul>
-                    <li className={`mobile_nav_item  ${selectedItem === 'greengold' ? 'active' : ''}`}>
-                      <Link to="/products/greengold" onClick={() => handleItemClick('greengold')}>ذهب اخضر</Link>
-                    </li>
-                    <li className={`mobile_nav_item  ${selectedItem === 'malika' ? 'active' : ''}`}>
-                      <Link to="/products/malika" onClick={() => handleItemClick('malika')} > مليكة</Link>
-                    </li>
-                    <li className={`mobile_nav_item  ${selectedItem === 'ogaro' ? 'active' : ''}`} >
-                      <Link to="/products/ogaro" onClick={() => handleItemClick('ogaro')} >اوغارو </Link>
-                    </li>
-                    <li className={`mobile_nav_item  ${selectedItem === 'avie' ? 'active' : ''}`} >
-                      <Link to="/products/avie" onClick={() => handleItemClick('avie')} >avie </Link>
-                    </li>
+                    {brandData.map((item) => {
+                      return (
+                        <li key={item.id} onClick={() => handeleClickOnBrand(item.id)}>
+                          {item.name} 
+                        </li>
+
+                      )
+                    })}
                   </ul>
                 )}
               </div>

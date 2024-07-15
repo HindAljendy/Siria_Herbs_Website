@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
-    <div className="HJ_MarginSection">
+    <div className="HJ_MarginSection" id="policies">
       <div className="ne-privacy-policy">
         <div className="privacy-container">
           <div className="ne-privacy-title">

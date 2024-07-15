@@ -1,15 +1,56 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Footer.css';
 import footerLogo from '../../assets/images/footer_logo.svg';
 import phone from '../../assets/icons/footer/phone-call-01.svg';
 import msg from '../../assets/icons/footer/_x39__18_.svg';
 import Focalx from './../../assets/icons/footer/Focal x.svg'
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { ColorContext } from '../../Contexts/ColorContext';
+
+
+type TBrandData = {
+    id: number,
+    name: string
+}
+
+type TContactData = {
+    email: string,
+    phone_number: string,
+}
 
 const Footer = () => {
 
+    const [brandData, setBrandData] = useState<TBrandData[]>([]);
+    const [contactData, setContactData] = useState<TContactData>();
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/api/brands-published')
+            .then((res) => setBrandData(res.data.data))
+            .catch((err) => console.error(err))
+            .finally(() => console.log(brandData));
+
+        axios.get('http://127.0.0.1:8000/api/contacts/1')
+            .then(res => setContactData(res.data.data))
+            .catch((err) => console.error(err))
+            .finally(() => console.log(contactData));
+    }, []);
+
+    const handeleClickOnBrand = (id: number) => {
+        navigate(`/brands/${id}`);
+    }
+
+    const { brandColor } = React.useContext(ColorContext);
+    console.log('brandColor is:', brandColor);
+    const mystyle = {
+        backgroundColor: `${brandColor}`
+    }
+
     return (
         <>
-            <div className="na-footer">
+            <div style={mystyle} className="na-footer">
                 <div className="na-container">
                     <div className="na-sec1">
                         <img src={footerLogo} alt="Footer Logo" />
@@ -20,17 +61,22 @@ const Footer = () => {
                     <div className='NA_Small_Sections'>
                         <div className="na-sec2">
                             <span className='MA_title'>روابط</span>
-                            <span className='MA_paragraph'> الشهادات</span>
-                            <span className='MA_paragraph'> السياسة</span>
+                            <Link to='/certifications'>
+                                <span className='MA_paragraph'> الشهادات</span>
+                            </Link>
+                            <Link to='/#policies'>
+                                <span className='MA_paragraph'> السياسة</span>
+                            </Link>
                         </div>
 
 
                         <div className="na-sec3">
                             <span className='MA_title'>العلامات التجارية</span>
-                            <span className='MA_paragraph'> ذهب أخضر</span>
-                            <span className='MA_paragraph'> مليكة</span>
-                            <span className='MA_paragraph'> a vie </span>
-                            <span className='MA_paragraph'> اوغارو</span>
+                            {brandData.map((item, index) => {
+                                return (
+                                    <span key={index} onClick={() => handeleClickOnBrand(item.id)} className='MA_paragraph'> {item.name}</span>
+                                )
+                            })}
                         </div>
 
 
@@ -40,14 +86,14 @@ const Footer = () => {
                                 <div className="na-icon-container">
                                     <img src={phone} alt="phone" />
                                 </div>
-                                <span className='MA_paragraph'>2020 41 963+</span>
+                                <span className='MA_paragraph'>{contactData?.phone_number}</span>
                             </div>
                             <div className="na-contact-item">
 
                                 <div className="na-icon-container">
                                     <img src={msg} alt="msg" />
                                 </div>
-                                <a className='MA_paragraph'>info@siriaherbs.com</a>
+                                <a className='MA_paragraph'>{contactData?.email}</a>
                             </div>
                         </div>
                     </div>

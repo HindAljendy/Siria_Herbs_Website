@@ -15,7 +15,7 @@ const NavigationLinks: React.FC<NavigationLinksProps> = ({
         <div className='NavigationLinks'>
             <span className='Navigate-main'>{navigateMain}</span>
             <img src={arrow_navigate} alt="arrow_navigate" />
-            <Link to='/' className='Navigate-link'>{navigateLink}</Link>
+            <Link to="" className='Navigate-link'>{navigateLink}</Link>
             <img src={arrow_navigate} alt="arrow_navigate" />
 
             <span className='Navigate-submain'>{navigateSubmain}</span>

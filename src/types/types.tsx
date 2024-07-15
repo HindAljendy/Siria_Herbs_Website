@@ -1,61 +1,64 @@
-
 export interface SectionHeaderProps {
-    title:string,
-    directionclass:string
+  title: string,
+  directionclass: string
 }
 
 export interface ContactSocialProps {
-    icon:string|undefined,
-    title:string|undefined,
-    details?:string|undefined,
-    Link?:string|undefined
+  icon: string | undefined,
+  title: string | undefined,
+  details?: string | undefined,
+  Link?: string | undefined
 }
 
 export type TContactSocialMediaData = {
-    data: any;
-    id:string ,
-    email:string,
-    phone_number:string,
-    adresses:string,
-    facebook_link:string,
-    instegram_link:string,
-    whatsApp_number:string,
-    twitter_link:string,
-    linkedin_link:string,
-    youtube_link:string
+  data: any;
+  id: string,
+  email: string,
+  phone_number: string,
+  adresses: string,
+  facebook_link: string,
+  instegram_link: string,
+  whatsApp_number: string,
+  twitter_link: string,
+  linkedin_link: string,
+  youtube_link: string
 
 }
 export interface NavigationLinksProps {
   navigateMain: string;
   navigateLink: string;
   navigateSubmain: string;
-  navigateSubmain2:string;
+  navigateSubmain2: string;
 
-}
-
-export interface BigNavigationLinksProps {
-  navigateMain: string;
-  navigateLinkMain: string;
-  navigateLinkSubmain: string;
-  navigateSubmain: string;
 }
 
 
 export interface Story {
-    id: number;
-    description: string;
-    file: string;
-  }
+  id: number;
+  description: string;
+  file: string;
+}
 
-  export interface ProductsProps {
-     brand_id:number|undefined,
-    brandColor:string|undefined
-    
-  }
-  export interface TProduct {
-  main_image?:string,
-  name?:string,
-  color?:string
+export interface ProductsProps {
+  brand_id: number | undefined,
+  brandColor: string | undefined
+
+}
+export interface TProduct {
+  additional_image: string,
+  name: string,
+  color: string
+}
+
+export type TBrandData = {
+  id: number;
+  name: string;
+  description: string;
+  brand_color: string;
+  background_image: string;
+  presentation_image: string;
+  main_image: string;
+  categories: TCategoryData[]
 }
 
 export type TCategoryData = {
@@ -65,19 +68,6 @@ export type TCategoryData = {
 }
 
 export type TProductData = {
-  id: number;
   name: string;
-  main_image: string;
-}
-
-
-export type TBrandData = {
-  brandId?: number|undefined;
-  name?: string;
-  description?: string;
-  brand_color?: string;
-  background_image?: string;
-  presentation_image?: string;
-  main_image?: string;
-  categories?: TCategoryData[]
+  additional_image: string;
 }

@@ -6,11 +6,12 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import useWindowSize from "../../useWindowSize "; // Import the custom hook
 import { FaAngleDoubleLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id?: number;
   name: string;
-  main_image: string;
+  additional_image: string;
   color: string;
 }
 
@@ -73,14 +74,14 @@ const ProductSlider = () => {
             <div className="ne_slide_container" key={index}>
               {chunk.map((product) => (
                 <div className="ne_product_con" key={product.id}>
-                  <img src={product.main_image} alt={product.name} />
+                  <img src={product.additional_image} alt={product.name} />
                   <p
                     className="ne_product_text"
                     style={{ color: product.color }}
                   >
                     {product.name}
                   </p>
-                  <button className="ne_product_info"> <FaAngleDoubleLeft className='fa-angle-icon'/>مزيد من التفاصيل</button>
+                  <button   className="ne_product_info"> <FaAngleDoubleLeft className='fa-angle-icon' />مزيد من التفاصيل</button>
                 </div>
               ))}
             </div>

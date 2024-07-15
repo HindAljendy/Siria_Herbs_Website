@@ -8,6 +8,13 @@
     text-align:center;
     width:85.35%;
     gap:100px;
+
+
+
+    margin-top: 54px;
+    height: max-content;
+    margin-bottom: 100px;
+    
 }
 
 
@@ -56,6 +63,12 @@
    flex-wrap: wrap;
    gap:110px;
    width: 100%;
+
+   height: max-content;
+
+
+  
+
    align-items: center;
    margin:0 auto;
    text-align: center;
