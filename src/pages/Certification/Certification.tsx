@@ -3,35 +3,41 @@ import iso_logo from "../../assets/images/Certification/isologo.svg";
 import iso_img from "../../assets/images/Certification/box-two-image.png";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { ColorContext } from '../../Contexts/ColorContext';
+import { ColorContext, ColorProvider } from '../../Contexts/ColorContext';
+import Navbar from '../../componnents/Navbar/Navbar';
 
 
 interface Certification {
-    id?: number;
-    name: string;
-    subname: string;
-    description: string;
-    icon: string;
-    photo:string;
-  }
+  id?: number;
+  name: string;
+  subname: string;
+  description: string;
+  icon: string;
+  photo: string;
+}
 const Certification = () => {
-    const [Certifications,setCertifications]=useState<Certification[]>([]);
-    const { setBrandColor } = React.useContext(ColorContext);
+  const [Certifications, setCertifications] = useState<Certification[]>([]);
+  const { setBrandColor } = React.useContext(ColorContext);
 
-    useEffect(() => {
-        axios
-          .get("http://127.0.0.1:8000/api/certifications")
-          .then((response) => {
-            setCertifications(response.data.data.data);
-            console.log(response.data.data.data);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-          setBrandColor('#283760')
-      }, []);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/api/certifications")
+      .then((response) => {
+        setCertifications(response.data.data.data);
+        console.log(response.data.data.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    setBrandColor('#283760')
+  }, []);
   return (
     <div className="ne-iso">
+      <div>
+        <ColorProvider>
+          <Navbar />
+        </ColorProvider>
+      </div>
       <div className="ne-iso-hero">
         <div className="overlay"></div>
         <div className="ne-hero-content">
@@ -107,10 +113,10 @@ const Certification = () => {
       </div>
 
       <div className="ne-iso-certification">
-        {Certifications.map((Certification,index)=>(
-            <div className="ne-certification-container" key={Certification.id}>
-            <div className={`ne-certification-content-${index+1}`}>
-              <div className={`ne-certification-logo-${index+1}`}>
+        {Certifications.map((Certification, index) => (
+          <div className="ne-certification-container" key={Certification.id}>
+            <div className={`ne-certification-content-${index + 1}`}>
+              <div className={`ne-certification-logo-${index + 1}`}>
                 <img src={Certification.icon} alt="" />
                 <div className="ne-img-content">
                   <h1>{Certification.name}</h1>
@@ -119,7 +125,7 @@ const Certification = () => {
               </div>
               <div className="ne-certification-text">
                 <p>{
-                    Certification.description}
+                  Certification.description}
                 </p>
               </div>
             </div>
@@ -128,7 +134,7 @@ const Certification = () => {
             </div>
           </div>
         ))}
-        
+
       </div>
     </div>
   )

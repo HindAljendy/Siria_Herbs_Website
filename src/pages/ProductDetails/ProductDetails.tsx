@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, {  useState } from 'react';
+
 import productImagePlaceholder from '../../assets/images/a vie/product3.webp';
 import './ProductDetails.css';
 import { LuLink } from "react-icons/lu";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { BsFacebook } from "react-icons/bs";
 import NavigationLinks from '../../componnents/NavigationLinks/NavigationLinks';
+
 
 
 const ProductDetails = () => {
@@ -31,6 +31,7 @@ const ProductDetails = () => {
     return (
         <>
             <div className="na-nav-product">
+        
                 <NavigationLinks
                     navigateMain='الرئيسية'
                     navigateLink=' المنتجات' navigateSubmain='a vie'

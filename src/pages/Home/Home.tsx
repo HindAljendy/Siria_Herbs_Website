@@ -6,11 +6,21 @@ import Store from '../../componnents/Store/History-Story'
 import Evaluations from '../../componnents/Evaluations/Evaluations'
 import Quote from '../../componnents/Quote/Quote'
 import Hero from '../../componnents/Hero/Hero'
+import Navbar from '../../componnents/Navbar/Navbar'
+import { ColorProvider } from '../../Contexts/ColorContext'
+
+
 
 
 const Home = () => {
   return (
     <>
+    <div>
+      <ColorProvider>
+        <Navbar className='HJ_navbar'/>
+      </ColorProvider>
+    </div>
+    
       <Hero/>
       <Product_Section />
       <Store />

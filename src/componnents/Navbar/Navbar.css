@@ -1,3 +1,13 @@
+.HJ_navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  z-index: 9999999;
+}
+
+
 .MA_head {
   border-bottom: 1px solid #333;
   display: flex;
@@ -5,7 +15,7 @@
   align-items: center;
   padding: 0 6.5rem;
   height: 3.53%;
-  background-color: transparent;
+
 }
 
 .MA_head .btn-primary,
@@ -62,7 +72,7 @@
   background-color: inherit;
   align-items: center;
   margin-bottom: 0 !important;
-  color: white;
+  color: black;
 }
 
 .MA_head ul li {
@@ -84,6 +94,8 @@
   padding: 10px;
   font-family: var(--almarai-family);
   margin: 0 6.5rem;
+
+
 }
 
 .MA_navbar .navbar-logo img {

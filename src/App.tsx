@@ -1,6 +1,5 @@
 import './App.css'
 import React from 'react';
-import Navbar from './componnents/Navbar/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -22,7 +21,6 @@ function App() {
 
 
       <ColorProvider>
-        <Navbar />
         {/* <ProductDetails /> */}
 
         <Routes>

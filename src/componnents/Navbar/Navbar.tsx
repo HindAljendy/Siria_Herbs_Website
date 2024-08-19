@@ -23,17 +23,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { ColorContext } from '../../Contexts/ColorContext';
 
+interface NavbarProps {
+  className?: string ,
+}
 
 type TBrandData = {
   id: number,
   name: string
 }
 
-const Navbar = () => {
+const Navbar: React.FC<NavbarProps>  = ({className}) => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState('');
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [brandData, setBrandData] = useState<TBrandData[]>([]);
+
 
   const navigate = useNavigate();
 
@@ -74,78 +78,82 @@ const Navbar = () => {
 
   return (
     <>
-      <div style={mystyle} className={`MA_head ${menuActive ? 'hide' : ''}`}>
-        <ul>
-          <li>
-            <span>info@siriaherbs.com</span>
-            <img src={mail} alt="mail" />
-          </li>
-          <li>
-            <span>+963 41 2020</span>
-            <img src={call} alt="call" />
-          </li>
-          <li>
-            <img src={insta} alt="insta" />
-          </li>
-          <li>
-            <img src={facebook} alt="facebook" />
-          </li>
-        </ul>
-        <div>
-          <DropdownButton id="dropdown-basic-button" title="العربية">
-            <Dropdown.Item href="#/action-1">العربية</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">الانكليزية</Dropdown.Item>
-          </DropdownButton>
-        </div>
-      </div>
-
-      <nav className={`MA_navbar ${menuActive ? 'hide' : ''}`}>
-        <button
-          className="menu-button"
-          onClick={handleToggleClick}
-          style={{ backgroundColor: 'inherit' }}
-        >
-          <img src={toggle} alt="toggle" />
-        </button>
-        <div className="navbar-logo">
-          <img src={nav_logo} alt="nav_search" />
-        </div>
-        <div className="list" style={{ display: 'flex', flexDirection: 'row' }}>
-          <ul className="navbar-items">
-            <li className={`navbar-item ${selectedItem === 'home' ? 'active' : ''}`}>
-              <Link to='/' onClick={() => handleItemClick('home')}>
-                الرئيسية
-              </Link>
+      <div className={className}>
+        <div style={mystyle} className={`MA_head ${menuActive ? 'hide' : ''}`}>
+          <ul>
+            <li>
+              <span>info@siriaherbs.com</span>
+              <img src={mail} alt="mail" />
             </li>
-            <li className={`navbar-item ${selectedItem === 'products' ? 'active' : ''}`}>
-              <a onClick={() => handleItemClick('products')}>
-                <DropdownButton id="dropdown-basic-button" title="منتجاتنا ">
-                  {brandData.map((item) => {
-                    return (
-                      <Dropdown.Item key={item.id} onClick={() => handeleClickOnBrand(item.id)}>{item.name}</Dropdown.Item>
-
-                    )
-                  })}
-                </DropdownButton>
-              </a>
+            <li>
+              <span>+963 41 2020</span>
+              <img src={call} alt="call" />
             </li>
-            <li className={`navbar-item ${selectedItem === 'about' ? 'active' : ''}`}>
-              <Link to='/about' onClick={() => handleItemClick('about')} className='MA_font_about'>
-                من نحن
-              </Link>
+            <li>
+              <img src={insta} alt="insta" />
             </li>
-            <li className={`navbar-item ${selectedItem === 'contact' ? 'active' : ''}`}>
-              <Link to='/contact' onClick={() => handleItemClick('contact')} className='MA_Font_Contact'>
-                تواصل معنا
-              </Link>
+            <li>
+              <img src={facebook} alt="facebook" />
             </li>
           </ul>
-          <div className="search-logo">
-            <img src={nav_search} alt="nav_search" />
+          <div>
+            <DropdownButton id="dropdown-basic-button" title="العربية">
+              <Dropdown.Item href="#/action-1">العربية</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">الانكليزية</Dropdown.Item>
+            </DropdownButton>
           </div>
         </div>
 
-      </nav>
+        <nav className={`MA_navbar ${menuActive ? 'hide' : ''}`}>
+          <button
+            className="menu-button"
+            onClick={handleToggleClick}
+            style={{ backgroundColor: 'inherit' }}
+          >
+            <img src={toggle} alt="toggle" />
+          </button>
+          <div className="navbar-logo">
+            <img src={nav_logo} alt="nav_search" />
+          </div>
+          <div className="list" style={{ display: 'flex', flexDirection: 'row' }}>
+            <ul className="navbar-items">
+              <li className={`navbar-item ${selectedItem === 'home' ? 'active' : ''}`}>
+                <Link to='/' onClick={() => handleItemClick('home')}>
+                  الرئيسية
+                </Link>
+              </li>
+              <li className={`navbar-item ${selectedItem === 'products' ? 'active' : ''}`}>
+                <a onClick={() => handleItemClick('products')}>
+                  <DropdownButton id="dropdown-basic-button" title="منتجاتنا ">
+                    {brandData.map((item) => {
+                      return (
+                        <Dropdown.Item key={item.id} onClick={() => handeleClickOnBrand(item.id)}>{item.name}</Dropdown.Item>
+
+                      )
+                    })}
+                  </DropdownButton>
+                </a>
+              </li>
+              <li className={`navbar-item ${selectedItem === 'about' ? 'active' : ''}`}>
+                <Link to='/about' onClick={() => handleItemClick('about')} className='MA_font_about'>
+                  من نحن
+                </Link>
+              </li>
+              <li className={`navbar-item ${selectedItem === 'contact' ? 'active' : ''}`}>
+                <Link to='/contact' onClick={() => handleItemClick('contact')} className='MA_Font_Contact'>
+                  تواصل معنا
+                </Link>
+              </li>
+            </ul>
+            <div className="search-logo">
+              <img src={nav_search} alt="nav_search" />
+            </div>
+          </div>
+
+        </nav>
+
+      </div>
+
 
       <div className={`ShowPage ${menuActive ? '' : 'hide'}`}></div>
       <div className={`mobile_nav ${menuActive ? 'active' : ''}`}>
@@ -183,7 +191,7 @@ const Navbar = () => {
                     {brandData.map((item) => {
                       return (
                         <li key={item.id} onClick={() => handeleClickOnBrand(item.id)}>
-                          {item.name} 
+                          {item.name}
                         </li>
 
                       )

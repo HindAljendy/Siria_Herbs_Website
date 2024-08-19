@@ -1,12 +1,20 @@
 import React from 'react'
 import ProductDetails from '../../pages/ProductDetails/ProductDetails'
 import ProductSlider from '../ProductSlider/ProductSlider'
+import { ColorProvider } from '../../Contexts/ColorContext'
+import { Navbar } from 'react-bootstrap'
 
 const ShowProduct = () => {
   return (
     <>
-    <ProductDetails/>
-    <ProductSlider />
+      <div>
+        <ColorProvider>
+          <Navbar />
+        </ColorProvider>
+      </div>
+      
+      <ProductDetails />
+      <ProductSlider />
     </>
   )
 }

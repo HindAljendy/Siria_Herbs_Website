@@ -9,15 +9,18 @@ import f3 from '../../assets/images/about/f3.png'
 import f4 from '../../assets/images/about/f4.png'
 import creative from '../../assets/images/about/creative.png'
 
-
-
-
-import Footer from '../../componnents/Footer/Footer'
-import NewsLetterForm from '../../componnents/News Letter Form/NewsLetterForm'
+import { ColorProvider } from '../../Contexts/ColorContext'
+import Navbar from '../../componnents/Navbar/Navbar'
 
 const About = () => {
   return (
     <>
+      <div>
+        <ColorProvider>
+          <Navbar />
+        </ColorProvider>
+      </div>
+
       <div className='hero-about'>
         <div className='overlay'></div>
         <div className='hero-content'>

@@ -5,7 +5,8 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './Brand.css'
 import Product from '../../componnents/Product/Product';
-import { ColorContext } from '../../Contexts/ColorContext';
+import { ColorContext, ColorProvider } from '../../Contexts/ColorContext';
+import { Navbar } from 'react-bootstrap';
 
 
 const BrandPage = () => {
@@ -37,7 +38,7 @@ const BrandPage = () => {
         setpresentation_image(response.data.data.presentation_image)
         setmainImg(response.data.data.main_image)
 
-  
+
 
         setActiveIndex(0)
         getProductsDependOnCategory(0)
@@ -73,6 +74,12 @@ const BrandPage = () => {
 
   return (
     <>
+      <div>
+        <ColorProvider>
+          <Navbar />
+        </ColorProvider>
+      </div>
+
 
 
       <Hero
@@ -107,8 +114,8 @@ const BrandPage = () => {
             })
           }
         </div>
-       
-    
+
+
       </div>
     </>
   )
